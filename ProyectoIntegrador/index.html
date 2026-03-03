@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microservicios — Desarrollo Web</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <!-- ══════════════════ NAVBAR ══════════════════ -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-boxes me-2"></i>MicroServicios</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link" href="#definicion">Definición</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comparacion">Comparación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mapa">Ubicación</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            <i class="bi bi-envelope me-1"></i>Contacto
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge-pill"><i class="bi bi-cpu me-1"></i>Arquitectura Moderna</span>
+                    <h1 class="mb-3">
+                        <span class="gradient-text">Microservicios</span><br />
+                        El futuro del desarrollo de software
+                    </h1>
+                    <p class="lead mb-4">Un enfoque arquitectónico nativo de la nube donde una aplicación se construye
+                        como un conjunto de servicios pequeños, independientes y desplegables por separado.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#definicion" class="btn btn-primary px-4">
+                            <i class="bi bi-arrow-down-circle me-2"></i>Explorar
+                        </a>
+                        <button class="btn btn-outline-primary px-4" data-bs-toggle="modal" data-bs-target="#infoModal">
+                            <i class="bi bi-info-circle me-2"></i>Más información
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-img-wrap text-center">
+                    <img src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/50/f5/microservices-architectures.component.xl.ts=1727353566017.png/content/adobe-cms/mx/es/topics/microservices/jcr:content/root/table_of_contents/body/content_section_styled/content-section-body-color-bp/xpath/content_block/img-column"
+                        alt="Arquitectura Microservicios" class="img-fluid"
+                        onerror="this.src='https://via.placeholder.com/520x340/1a1a2e/6c63ff?text=Microservicios'" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ STATS ══════════════════ -->
+    <div class="container my-5">
+        <div class="stats-bar">
+            <div class="row text-center g-4">
+                <div class="col-6 col-md-3">
+                    <div class="stat-number">87%</div>
+                    <div class="stat-label">de usuarios confirman que vale la pena adoptarlos <small>(IBM, 2021)</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-number">+60%</div>
+                    <div class="stat-label">de empresas Fortune 500 los utilizan</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-number">~10x</div>
+                    <div class="stat-label">mayor velocidad de despliegue vs monolítico</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-number">↓35%</div>
+                    <div class="stat-label">reducción promedio en costos de escalado</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════ DEFINICIÓN ══════════════════ -->
+    <section id="definicion">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="badge bg-secondary mb-2">Fundamentos</div>
+                    <h2 class="section-title">¿Qué son los <span class="gradient-text">Microservicios</span>?</h2>
+                    <div class="divider"></div>
+                    <p style="color:#b0b0d0;">Los microservicios, o arquitectura de microservicios, son un enfoque
+                        arquitectónico <strong style="color:#fff">nativo de la nube</strong> en el que una sola
+                        aplicación se conforma de muchos componentes o servicios más pequeños, poco acoplados y que se
+                        pueden desplegar de forma <strong style="color:#fff">independiente</strong>.</p>
+                    <p style="color:#b0b0d0;">A diferencia de la arquitectura <em>monolítica</em> — donde toda la lógica
+                        vive en una sola unidad grande —, en los microservicios cada servicio tiene su propia
+                        tecnología, base de datos y modelo de datos, y se comunica con los demás vía <strong
+                            style="color:#fff">APIs REST</strong>, transmisión de eventos o agentes de mensajes.</p>
+                    <div class="d-flex gap-3 mt-4 flex-wrap">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                            <span style="color:#ccc;">Independientes</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                            <span style="color:#ccc;">Poco acoplados</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                            <span style="color:#ccc;">Escalables por separado</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://d1.awsstatic.com/Developer%20Marketing/containers/monolith_2-VM-vs-Containers.78f841efba175556d82f64d1779eb8b725de398d.png"
+                        class="img-fluid rounded-4 shadow" alt="Monolítico vs Microservicios"
+                        onerror="this.src='https://via.placeholder.com/540x360/1a1a2e/6c63ff?text=Monolítico+vs+Microservicios'" />
+                    <p class="text-center mt-2" style="font-size:.8rem;color:#666;">Comparación: Arquitectura Monolítica
+                        vs Microservicios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ CARACTERÍSTICAS ══════════════════ -->
+    <section id="caracteristicas" style="background: #0a0a18;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Características <span class="gradient-text">Principales</span></h2>
+                <p class="section-sub">Lo que define a un sistema basado en microservicios</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-purple"><i class="bi bi-plugin"></i></div>
+                        <h5>Desacoplamiento</h5>
+                        <p>Cada servicio puede desarrollarse, desplegarse y escalarse de forma totalmente independiente.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-pink"><i class="bi bi-database"></i></div>
+                        <h5>BD por servicio</h5>
+                        <p>Cada microservicio gestiona su propia base de datos, lo que evita dependencias de datos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-green"><i class="bi bi-arrow-left-right"></i></div>
+                        <h5>Comunicación via API</h5>
+                        <p>Los servicios se comunican mediante APIs REST, eventos o colas de mensajes (Kafka, RabbitMQ).
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-blue"><i class="bi bi-shield-check"></i></div>
+                        <h5>Tolerancia a fallos</h5>
+                        <p>Si un servicio falla, los demás continúan operando, aumentando la resiliencia del sistema.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-green"><i class="bi bi-code-slash"></i></div>
+                        <h5>Polyglot</h5>
+                        <p>Cada equipo puede elegir el lenguaje y las herramientas más adecuadas para su servicio.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-purple"><i class="bi bi-people"></i></div>
+                        <h5>Equipos pequeños</h5>
+                        <p>Se promueve la regla de las "dos pizzas": equipos pequeños y multifuncionales por servicio.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-pink"><i class="bi bi-arrow-repeat"></i></div>
+                        <h5>CI/CD Continuo</h5>
+                        <p>Los pipelines de integración y entrega continua permiten despliegues frecuentes y seguros.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card">
+                        <div class="feature-icon icon-blue"><i class="bi bi-zoom-in"></i></div>
+                        <h5>Escalado independiente</h5>
+                        <p>Solo escala el servicio que lo necesita, no toda la aplicación — reduciendo costos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ BENEFICIOS / TIMELINE ══════════════════ -->
+    <section id="beneficios">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Beneficios para la <span class="gradient-text">Organización</span></h2>
+                    <div class="divider"></div>
+                    <div class="timeline mt-4">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h6>Desplegable de forma independiente</h6>
+                            <p>Ya no se requiere un esfuerzo masivo para cambiar una línea de código o agregar una nueva
+                                función. Se reduce el tiempo de ciclo de manera radical.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:var(--secondary)"></div>
+                            <h6>La herramienta adecuada para cada tarea</h6>
+                            <p>En lugar de una pila tecnológica única para toda la app, cada microservicio puede
+                                optimizar su stack (lenguaje, base de datos, framework).</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:var(--accent)"></div>
+                            <h6>Escalado preciso y económico</h6>
+                            <p>Solo se escalan los componentes con mayor demanda, en lugar de replicar toda la
+                                aplicación — reduciendo el desperdicio de recursos.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#38bdf8"></div>
+                            <h6>Mayor agilidad y velocidad</h6>
+                            <p>Los equipos trabajan en paralelo, despliegan con frecuencia y reaccionan rápidamente al
+                                mercado sin bloquear el trabajo de otros.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#f59e0b"></div>
+                            <h6>Resiliencia ante fallos</h6>
+                            <p>El aislamiento entre servicios evita que un fallo se propague a toda la aplicación,
+                                mejorando la disponibilidad general del sistema.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+                    <div class="divider"></div>
+                    <div class="accordion mt-4" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    ¿Cuál es la diferencia con una arquitectura monolítica?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">En una arquitectura monolítica toda la lógica de negocio
+                                    vive en una sola unidad deployable y muy acoplada. Los microservicios dividen esa
+                                    aplicación en servicios pequeños con responsabilidades delimitadas, cada uno
+                                    desplegable de forma independiente.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    ¿Cuándo NO usar microservicios?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Para aplicaciones pequeñas o equipos reducidos, la
+                                    complejidad operacional de gestionar múltiples servicios puede superar los
+                                    beneficios. Un monolito bien diseñado puede ser la elección más práctica en ese
+                                    contexto.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    ¿Qué herramientas se usan con microservicios?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Docker y Kubernetes para contenedores y orquestación, API
+                                    Gateways (Kong, AWS API Gateway), message brokers (Kafka, RabbitMQ), herramientas de
+                                    observabilidad (Prometheus, Grafana, Jaeger) y CI/CD (Jenkins, GitHub Actions).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    ¿Son lo mismo que los contenedores Docker?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">No. Los microservicios son un <em>patrón
+                                        arquitectónico</em>; los contenedores son una <em>tecnología de
+                                        empaquetado</em>. Sin embargo, los contenedores son la forma más común de
+                                    desplegar microservicios porque garantizan portabilidad y aislamiento.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                    ¿Qué empresas usan microservicios?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Netflix, Amazon, Uber, Spotify y LinkedIn son casos de éxito
+                                    emblemáticos. Netflix, por ejemplo, gestiona más de 700 microservicios para ofrecer
+                                    streaming a millones de usuarios simultáneos.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ COMPARACIÓN ══════════════════ -->
+    <section id="comparacion" style="background:#0a0a18;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Microservicios vs <span class="gradient-text">Otras Arquitecturas</span></h2>
+                <p class="section-sub">Diferencias clave entre los principales enfoques arquitectónicos</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-dark table-bordered table-hover align-middle rounded">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Criterio</th>
+                            <th><i class="bi bi-box text-danger me-1"></i>Monolítico</th>
+                            <th><i class="bi bi-diagram-3 text-warning me-1"></i>SOA</th>
+                            <th><i class="bi bi-boxes text-success me-1"></i>Microservicios</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Despliegue</td>
+                            <td>Único bloque</td>
+                            <td>Por servicio (pesado)</td>
+                            <td>Independiente y ágil</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Escalado</td>
+                            <td>Toda la app</td>
+                            <td>Servicio completo</td>
+                            <td>Componente específico</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Tecnología</td>
+                            <td>Una sola pila</td>
+                            <td>Estandarizada</td>
+                            <td>Polyglot libre</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Comunicación</td>
+                            <td>Llamadas internas</td>
+                            <td>ESB (bus)</td>
+                            <td>REST / Events / MQ</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Tamaño de equipo</td>
+                            <td>Grande único</td>
+                            <td>Múltiple</td>
+                            <td>Pequeño por servicio</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Resiliencia</td>
+                            <td>Baja</td>
+                            <td>Media</td>
+                            <td>Alta</td>
+                        </tr>
+                        <tr>
+                            <td class="text-start fw-bold" style="color:#fff;">Complejidad operativa</td>
+                            <td>Baja</td>
+                            <td>Media-Alta</td>
+                            <td>Alta</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Image gallery using Bootstrap carousel (component #3) -->
+            <div class="row mt-5 g-4">
+                <div class="col-12">
+                    <h4 class="mb-4" style="font-weight:700;">Casos de uso en la industria</h4>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100"
+                        style="background:var(--card-bg);border:1px solid rgba(108,99,255,0.2);border-radius:16px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/320px-Netflix_2015_logo.svg.png"
+                            class="card-img-top p-4" style="height:100px;object-fit:contain;background:#000;"
+                            alt="Netflix" onerror="this.style.display='none'" />
+                        <div class="card-body">
+                            <h6 class="card-title" style="color:#fff;">Netflix</h6>
+                            <p class="card-text" style="color:#9090b0;font-size:.9rem;">Migró de monolito a +700
+                                microservicios para gestionar 200M+ de usuarios con alta disponibilidad global.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100"
+                        style="background:var(--card-bg);border:1px solid rgba(108,99,255,0.2);border-radius:16px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png"
+                            class="card-img-top p-4" style="height:100px;object-fit:contain;background:#000;"
+                            alt="Amazon" onerror="this.style.display='none'" />
+                        <div class="card-body">
+                            <h6 class="card-title" style="color:#fff;">Amazon</h6>
+                            <p class="card-text" style="color:#9090b0;font-size:.9rem;">Pionero en la adopción. Creó AWS
+                                precisamente para gestionar su propio ecosistema de microservicios a escala masiva.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100"
+                        style="background:var(--card-bg);border:1px solid rgba(108,99,255,0.2);border-radius:16px;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Uber_logo_2018.svg/320px-Uber_logo_2018.svg.png"
+                            class="card-img-top p-4" style="height:100px;object-fit:contain;background:#000;" alt="Uber"
+                            onerror="this.style.display='none'" />
+                        <div class="card-body">
+                            <h6 class="card-title" style="color:#fff;">Uber</h6>
+                            <p class="card-text" style="color:#9090b0;font-size:.9rem;">Adoptó microservicios para
+                                separar la lógica de viajes, pagos, mapas y notificaciones, escalando cada área
+                                independientemente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ VIDEO ══════════════════ -->
+    <section id="video">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Material de <span class="gradient-text">Apoyo Visual</span></h2>
+                <p class="section-sub">Videos explicativos sobre microservicios</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video-wrap">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/rv4LlmLmVWk" title="¿Qué son los Microservicios?"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2" style="font-size:.85rem;color:#666;">¿Qué son los microservicios? —
+                        Explicación visual</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex flex-column gap-3 h-100 justify-content-center">
+                        <div class="feature-card">
+                            <div class="feature-icon icon-purple"><i class="bi bi-play-circle-fill"></i></div>
+                            <h5>¿Por qué microservicios?</h5>
+                            <p>Conoce las razones por las que empresas líderes están adoptando esta arquitectura.</p>
+                            <a href="https://www.youtube.com/watch?v=j3XufmvEMiM" target="_blank"
+                                class="btn btn-outline-primary btn-sm mt-2">Ver en YouTube</a>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon icon-pink"><i class="bi bi-camera-video-fill"></i></div>
+                            <h5>Microservicios con Docker</h5>
+                            <p>Aprende a contenerizar microservicios usando Docker y Docker Compose.</p>
+                            <a href="https://www.youtube.com/watch?v=Wfh6sFkSbdo" target="_blank"
+                                class="btn btn-outline-primary btn-sm mt-2">Ver en YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ MAPA ══════════════════ -->
+    <section id="mapa" style="background:#0a0a18;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Ubicación de <span class="gradient-text">Referencia</span></h2>
+                <p class="section-sub">Amazon Web Services — Sede principal en Seattle, WA (pioneros en microservicios)
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="map-wrap">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.9975098844063!2d-122.33694968446835!3d47.62268637918727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490158de5678b9d%3A0x9f3dc75a5fbf7fa9!2sAmazon%20Headquarters!5e0!3m2!1ses!2smx!4v1680000000000!5m2!1ses!2smx"
+                            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p class="text-center mt-3" style="color:#666;font-size:.88rem;">
+                        <i class="bi bi-geo-alt-fill text-danger me-1"></i>Amazon HQ — Seattle, Washington, EE.UU. —
+                        Empresa pionera en la adopción de microservicios a escala industrial.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════ MODAL INFORMACIÓN ══════════════════ -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel"><i
+                            class="bi bi-info-circle-fill text-primary me-2"></i>Glosario de Microservicios</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="feature-card p-3">
+                                <div class="feature-icon icon-purple" style="width:40px;height:40px;font-size:1.1rem;">
+                                    <i class="bi bi-diagram-2"></i>
+                                </div>
+                                <h6 style="color:#fff;margin-top:.5rem;">API Gateway</h6>
+                                <p style="font-size:.85rem;">Punto de entrada único que enruta solicitudes a los
+                                    microservicios correspondientes. Gestiona autenticación, rate limiting y logging.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card p-3">
+                                <div class="feature-icon icon-green" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-broadcast"></i></div>
+                                <h6 style="color:#fff;margin-top:.5rem;">Event-Driven</h6>
+                                <p style="font-size:.85rem;">Patrón donde los servicios se comunican mediante eventos
+                                    publicados en un bus (Kafka, RabbitMQ), reduciendo el acoplamiento directo.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card p-3">
+                                <div class="feature-icon icon-pink" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-activity"></i></div>
+                                <h6 style="color:#fff;margin-top:.5rem;">Circuit Breaker</h6>
+                                <p style="font-size:.85rem;">Patrón de resiliencia que detiene llamadas a servicios
+                                    fallidos para evitar cascadas de errores en el sistema.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card p-3">
+                                <div class="feature-icon icon-blue" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-search"></i></div>
+                                <h6 style="color:#fff;margin-top:.5rem;">Service Discovery</h6>
+                                <p style="font-size:.85rem;">Mecanismo por el cual los servicios se registran y se
+                                    encuentran dinámicamente (Consul, Eureka, Kubernetes DNS).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════ MODAL CONTACTO (con formulario validado) ══════════════════ -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel"><i
+                            class="bi bi-envelope-fill text-primary me-2"></i>Formulario de Contacto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="formSuccess" class="alert alert-success d-none">
+                        <i class="bi bi-check-circle me-2"></i>¡Mensaje enviado correctamente!
+                    </div>
+                    <div id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre completo *</label>
+                            <input type="text" id="fname" class="form-control" placeholder="Ej: Juan Pérez" />
+                            <div class="invalid-feedback">El nombre es obligatorio (mínimo 3 caracteres).</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" id="femail" class="form-control" placeholder="correo@ejemplo.com" />
+                            <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Institución / Empresa *</label>
+                            <input type="text" id="finst" class="form-control" placeholder="Ej: Universidad XYZ" />
+                            <div class="invalid-feedback">Este campo es obligatorio.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tema de interés *</label>
+                            <select id="ftopic" class="form-select">
+                                <option value="">-- Selecciona un tema --</option>
+                                <option value="microservicios">Microservicios</option>
+                                <option value="webapi">Web APIs</option>
+                                <option value="contenedores">Contenedores / Docker</option>
+                                <option value="nube">Desarrollo en la nube</option>
+                            </select>
+                            <div class="invalid-feedback">Selecciona al menos un tema de interés.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mensaje *</label>
+                            <textarea id="fmsg" class="form-control" rows="3"
+                                placeholder="Escribe tu pregunta o comentario..."></textarea>
+                            <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="validateForm()">
+                        <i class="bi bi-send me-1"></i>Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════ FOOTER ══════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <strong style="color:#a0a0c0;"><i class="bi bi-boxes me-1 text-primary"></i>MicroServicios</strong>
+                    — Desarrollo Web · 6°A · 2026
+                    <br /><small>Profesor: Dr. en C. Margarita Mondragón Arellano</small>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small>Fuentes: <a href="https://www.ibm.com/mx-es/topics/microservices" target="_blank">IBM</a> ·
+                        <a href="https://aws.amazon.com/es/microservices/" target="_blank">AWS</a> · <a
+                            href="https://www.intel.la/content/www/xl/es/cloud-computing/microservices.html"
+                            target="_blank">Intel</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // ─── FORM VALIDATION ───
+        function validateForm() {
+            let valid = true;
+
+            const fields = [
+                { id: 'fname', check: v => v.trim().length >= 3 },
+                { id: 'femail', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+                { id: 'finst', check: v => v.trim().length > 0 },
+                { id: 'ftopic', check: v => v !== '' },
+                { id: 'fmsg', check: v => v.trim().length >= 10 },
+            ];
+
+            fields.forEach(({ id, check }) => {
+                const el = document.getElementById(id);
+                if (check(el.value)) {
+                    el.classList.remove('is-invalid');
+                    el.classList.add('is-valid');
+                } else {
+                    el.classList.remove('is-valid');
+                    el.classList.add('is-invalid');
+                    valid = false;
+                }
+            });
+
+            if (valid) {
+                document.getElementById('contactForm').classList.add('d-none');
+                document.getElementById('formSuccess').classList.remove('d-none');
+                setTimeout(() => {
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                    modal.hide();
+                    // reset
+                    setTimeout(() => {
+                        document.getElementById('contactForm').classList.remove('d-none');
+                        document.getElementById('formSuccess').classList.add('d-none');
+                        fields.forEach(({ id }) => {
+                            const el = document.getElementById(id);
+                            el.value = '';
+                            el.classList.remove('is-valid', 'is-invalid');
+                        });
+                    }, 500);
+                }, 2000);
+            }
+        }
+
+        // ─── SMOOTH SCROLL ───
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // ─── NAVBAR ACTIVE ON SCROLL ───
+        const sections = document.querySelectorAll('section[id], div[id="inicio"]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+            });
+            navLinks.forEach(l => {
+                l.classList.remove('active');
+                if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
