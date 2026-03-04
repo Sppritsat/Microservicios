@@ -4,36 +4,37 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Microservicios — Desarrollo Web</title>
-    <!-- Bootstrap 5 -->
+    <title>Unidad II — Programación del Lado del Servidor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
 
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- ══════════════════ NAVBAR ══════════════════ -->
+    <!-- ════════════════════ NAVBAR ════════════════════ -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><i class="bi bi-boxes me-2"></i>MicroServicios</a>
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#"><i class="bi bi-cpu-fill me-2"></i>Unidad II — Serv.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto gap-2">
-                    <li class="nav-item"><a class="nav-link" href="#definicion">Definición</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#comparacion">Comparación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mapa">Ubicación</a></li>
-                    <li class="nav-item">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="#webapis"><i class="bi bi-cloud-fill me-1"
+                                style="color:var(--primary)"></i>Web APIs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#microservicios"><i class="bi bi-boxes me-1"
+                                style="color:var(--secondary)"></i>Microservicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#desarrollo"><i class="bi bi-code-slash me-1"
+                                style="color:var(--cyan)"></i>Desarrollo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contenedores"><i class="bi bi-box-seam me-1"
+                                style="color:var(--accent)"></i>Contenedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nube"><i class="bi bi-cloud me-1"
+                                style="color:var(--orange)"></i>Nube</a></li>
+                    <li class="nav-item ms-2">
                         <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">
                             <i class="bi bi-envelope me-1"></i>Contacto
                         </button>
@@ -43,544 +44,1108 @@
         </div>
     </nav>
 
-    <!-- ══════════════════ HERO ══════════════════ -->
-    <section class="hero" id="inicio">
+    <!-- ════════════════════ HERO ════════════════════ -->
+    <section class="hero">
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <span class="badge-pill"><i class="bi bi-cpu me-1"></i>Arquitectura Moderna</span>
-                    <h1 class="mb-3">
-                        <span class="gradient-text">Microservicios</span><br />
-                        El futuro del desarrollo de software
+                <div class="col-lg-7">
+                    <span class="badge-pill"><i class="bi bi-mortarboard me-1"></i>Desarrollo Web · 6°A · 2026</span>
+                    <h1 class="mb-2">
+                        <span class="gradient-text">Programación del lado</span><br />del servidor
                     </h1>
-                    <p class="lead mb-4">Un enfoque arquitectónico nativo de la nube donde una aplicación se construye
-                        como un conjunto de servicios pequeños, independientes y desplegables por separado.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#definicion" class="btn btn-primary px-4">
-                            <i class="bi bi-arrow-down-circle me-2"></i>Explorar
-                        </a>
-                        <button class="btn btn-outline-primary px-4" data-bs-toggle="modal" data-bs-target="#infoModal">
-                            <i class="bi bi-info-circle me-2"></i>Más información
-                        </button>
+                    <p style="color:#9090b0;font-size:1.05rem;max-width:580px;margin-bottom:1.5rem;">
+                        Explora los fundamentos de las Web APIs, la arquitectura de microservicios, el desarrollo de
+                        APIs, la gestión de contenedores y las aplicaciones para la nube moderna.
+                    </p>
+                    <div class="hero-nav-cards">
+                        <a href="#webapis" class="hero-nav-card"><i class="bi bi-cloud-fill"></i>Web APIs</a>
+                        <a href="#microservicios" class="hero-nav-card"><i class="bi bi-boxes"></i>Microservicios</a>
+                        <a href="#desarrollo" class="hero-nav-card"><i class="bi bi-code-slash"></i>Desarrollo de
+                            API</a>
+                        <a href="#contenedores" class="hero-nav-card"><i class="bi bi-box-seam"></i>Contenedores</a>
+                        <a href="#nube" class="hero-nav-card"><i class="bi bi-cloud"></i>Aplicaciones Nube</a>
                     </div>
                 </div>
-                <div class="col-lg-6 hero-img-wrap text-center">
-                    <img src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/cdp/cf/ul/g/50/f5/microservices-architectures.component.xl.ts=1727353566017.png/content/adobe-cms/mx/es/topics/microservices/jcr:content/root/table_of_contents/body/content_section_styled/content-section-body-color-bp/xpath/content_block/img-column"
-                        alt="Arquitectura Microservicios" class="img-fluid"
-                        onerror="this.src='https://via.placeholder.com/520x340/1a1a2e/6c63ff?text=Microservicios'" />
+                <div class="col-lg-5 text-center d-none d-lg-block">
+                    <svg viewBox="0 0 400 320" width="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#6c63ff" stop-opacity=".3" />
+                                <stop offset="100%" stop-color="#6c63ff" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                        <ellipse cx="200" cy="160" rx="160" ry="140" fill="url(#glow)" />
+                        <!-- Central node -->
+                        <circle cx="200" cy="160" r="36" fill="#1a1a2e" stroke="#6c63ff" stroke-width="2" />
+                        <text x="200" y="155" text-anchor="middle" fill="#6c63ff" font-size="11"
+                            font-weight="700">Web</text>
+                        <text x="200" y="170" text-anchor="middle" fill="#6c63ff" font-size="11"
+                            font-weight="700">APIs</text>
+                        <!-- Nodes -->
+                        <circle cx="90" cy="80" r="28" fill="#1a1a2e" stroke="#ff6584" stroke-width="1.5" />
+                        <text x="90" y="76" text-anchor="middle" fill="#ff6584" font-size="9"
+                            font-weight="700">Micro-</text>
+                        <text x="90" y="88" text-anchor="middle" fill="#ff6584" font-size="9"
+                            font-weight="700">servicios</text>
+                        <circle cx="320" cy="80" r="28" fill="#1a1a2e" stroke="#38bdf8" stroke-width="1.5" />
+                        <text x="320" y="76" text-anchor="middle" fill="#38bdf8" font-size="9"
+                            font-weight="700">Desa-</text>
+                        <text x="320" y="88" text-anchor="middle" fill="#38bdf8" font-size="9"
+                            font-weight="700">rrollo</text>
+                        <circle cx="80" cy="260" r="28" fill="#1a1a2e" stroke="#43e97b" stroke-width="1.5" />
+                        <text x="80" y="256" text-anchor="middle" fill="#43e97b" font-size="9"
+                            font-weight="700">Conte-</text>
+                        <text x="80" y="268" text-anchor="middle" fill="#43e97b" font-size="9"
+                            font-weight="700">nedores</text>
+                        <circle cx="320" cy="260" r="28" fill="#1a1a2e" stroke="#fb923c" stroke-width="1.5" />
+                        <text x="320" y="256" text-anchor="middle" fill="#fb923c" font-size="9"
+                            font-weight="700">Apps</text>
+                        <text x="320" y="268" text-anchor="middle" fill="#fb923c" font-size="9"
+                            font-weight="700">Nube</text>
+                        <!-- Lines -->
+                        <line x1="200" y1="124" x2="108" y2="100" stroke="#6c63ff" stroke-width="1" stroke-opacity=".5"
+                            stroke-dasharray="4,3" />
+                        <line x1="200" y1="124" x2="293" y2="100" stroke="#38bdf8" stroke-width="1" stroke-opacity=".5"
+                            stroke-dasharray="4,3" />
+                        <line x1="200" y1="196" x2="105" y2="240" stroke="#43e97b" stroke-width="1" stroke-opacity=".5"
+                            stroke-dasharray="4,3" />
+                        <line x1="200" y1="196" x2="295" y2="240" stroke="#fb923c" stroke-width="1" stroke-opacity=".5"
+                            stroke-dasharray="4,3" />
+                    </svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════ STATS ══════════════════ -->
-    <div class="container my-5">
-        <div class="stats-bar">
-            <div class="row text-center g-4">
-                <div class="col-6 col-md-3">
-                    <div class="stat-number">87%</div>
-                    <div class="stat-label">de usuarios confirman que vale la pena adoptarlos <small>(IBM, 2021)</small>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-number">+60%</div>
-                    <div class="stat-label">de empresas Fortune 500 los utilizan</div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-number">~10x</div>
-                    <div class="stat-label">mayor velocidad de despliegue vs monolítico</div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-number">↓35%</div>
-                    <div class="stat-label">reducción promedio en costos de escalado</div>
+    <!-- ══════════════════════════════════════════════════
+     TEMA 1 — TECNOLOGÍAS DE WEB APIs
+══════════════════════════════════════════════════ -->
+    <span class="section-anchor" id="webapis"></span>
+    <section>
+        <div class="container">
+            <!-- Header -->
+            <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="feat-icon ic-purple"
+                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
+                        class="bi bi-cloud-fill"></i></div>
+                <div>
+                    <div class="section-tag">Tema 1</div>
+                    <h2 class="section-title mb-0">Tecnologías de <span class="gradient-text">Web APIs</span></h2>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="divider div-purple"></div>
 
-    <!-- ══════════════════ DEFINICIÓN ══════════════════ -->
-    <section id="definicion">
-        <div class="container">
-            <div class="row align-items-center g-5">
+            <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
-                    <div class="badge bg-secondary mb-2">Fundamentos</div>
-                    <h2 class="section-title">¿Qué son los <span class="gradient-text">Microservicios</span>?</h2>
-                    <div class="divider"></div>
-                    <p style="color:#b0b0d0;">Los microservicios, o arquitectura de microservicios, son un enfoque
-                        arquitectónico <strong style="color:#fff">nativo de la nube</strong> en el que una sola
-                        aplicación se conforma de muchos componentes o servicios más pequeños, poco acoplados y que se
-                        pueden desplegar de forma <strong style="color:#fff">independiente</strong>.</p>
-                    <p style="color:#b0b0d0;">A diferencia de la arquitectura <em>monolítica</em> — donde toda la lógica
-                        vive en una sola unidad grande —, en los microservicios cada servicio tiene su propia
-                        tecnología, base de datos y modelo de datos, y se comunica con los demás vía <strong
-                            style="color:#fff">APIs REST</strong>, transmisión de eventos o agentes de mensajes.</p>
-                    <div class="d-flex gap-3 mt-4 flex-wrap">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
-                            <span style="color:#ccc;">Independientes</span>
+                    <h4 style="font-weight:700;color:#fff;">¿Qué es una API?</h4>
+                    <p style="color:#9090b0;">Una <strong style="color:#fff">API (Application Programming
+                            Interface)</strong> es un conjunto de mecanismos y reglas que permiten a dos componentes de
+                        software comunicarse entre sí mediante un conjunto de definiciones y protocolos. Actúa como una
+                        capa intermedia que procesa las transferencias de datos entre sistemas.</p>
+                    <p style="color:#9090b0;">En el contexto web, una <strong style="color:#fff">Web API</strong> expone
+                        funcionalidades de un servidor a través del protocolo HTTP, permitiendo que cualquier cliente
+                        —web, móvil, IoT— consuma datos y servicios de forma estandarizada.</p>
+                    <div class="row g-2 mt-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span
+                                    style="color:#ccc;font-size:.9rem;">Independiente del lenguaje</span></div>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
-                            <span style="color:#ccc;">Poco acoplados</span>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span
+                                    style="color:#ccc;font-size:.9rem;">Basada en HTTP/HTTPS</span></div>
                         </div>
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
-                            <span style="color:#ccc;">Escalables por separado</span>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span
+                                    style="color:#ccc;font-size:.9rem;">JSON / XML como datos</span></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span
+                                    style="color:#ccc;font-size:.9rem;">Reutilizable y escalable</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://d1.awsstatic.com/Developer%20Marketing/containers/monolith_2-VM-vs-Containers.78f841efba175556d82f64d1779eb8b725de398d.png"
-                        class="img-fluid rounded-4 shadow" alt="Monolítico vs Microservicios"
-                        onerror="this.src='https://via.placeholder.com/540x360/1a1a2e/6c63ff?text=Monolítico+vs+Microservicios'" />
-                    <p class="text-center mt-2" style="font-size:.8rem;color:#666;">Comparación: Arquitectura Monolítica
-                        vs Microservicios</p>
+                    <div class="code-block">
+                        <span class="cm">// Ejemplo: consumir una Web API con fetch (JS)</span>
+                        <span class="kw">const</span> response = <span class="kw">await</span> fetch(
+                        <span class="str">'https://api.ejemplo.com/v1/usuarios'</span>,
+                        {
+                        method: <span class="str">'GET'</span>,
+                        headers: {
+                        <span class="str">'Authorization'</span>: <span class="str">'Bearer &lt;token&gt;'</span>,
+                        <span class="str">'Content-Type'</span>: <span class="str">'application/json'</span>
+                        }
+                        }
+                        );
+
+                        <span class="kw">const</span> data = <span class="kw">await</span> response.json();
+                        console.log(data); <span class="cm">// ← Datos del servidor</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipos de APIs -->
+            <h4 class="mb-3" style="font-weight:700;color:#fff;">Tipos de Web APIs</h4>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card">
+                        <div class="feat-icon ic-purple"><i class="bi bi-arrow-left-right"></i></div>
+                        <h5>REST</h5>
+                        <p>El estilo más popular. Usa métodos HTTP (GET, POST, PUT, DELETE) y recursos identificados por
+                            URLs. Stateless y sin estado entre peticiones.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-grid-3x3-gap"></i></div>
+                        <h5>GraphQL</h5>
+                        <p>Permite al cliente pedir exactamente los datos que necesita. Desarrollado por Meta. Reduce el
+                            over-fetching y under-fetching de datos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card cyan">
+                        <div class="feat-icon ic-blue"><i class="bi bi-broadcast-pin"></i></div>
+                        <h5>WebSockets</h5>
+                        <p>Comunicación bidireccional en tiempo real entre cliente y servidor. Ideal para chats,
+                            notificaciones push y dashboards en vivo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-braces-asterisk"></i></div>
+                        <h5>SOAP</h5>
+                        <p>Protocolo basado en XML. Más rígido y verboso que REST, pero con mayor soporte para
+                            transacciones y seguridad empresarial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplos reales -->
+            <h4 class="mb-3" style="font-weight:700;color:#fff;">APIs populares en la industria</h4>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card text-center p-3">
+                        <i class="bi bi-google fs-2" style="color:#4285F4;"></i>
+                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">Google Maps, Gmail, Traductor</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card text-center p-3">
+                        <i class="bi bi-paypal fs-2" style="color:#003087;"></i>
+                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">PayPal Payments API</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card text-center p-3">
+                        <i class="bi bi-youtube fs-2" style="color:#FF0000;"></i>
+                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">YouTube Embed API</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card text-center p-3">
+                        <i class="bi bi-whatsapp fs-2" style="color:#25D366;"></i>
+                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">WhatsApp Business API</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card text-center p-3">
+                        <i class="bi bi-instagram fs-2" style="color:#E1306C;"></i>
+                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">Instagram Graph API</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card text-center p-3">
+                        <i class="bi bi-facebook fs-2" style="color:#1877F2;"></i>
+                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">Facebook Marketing API</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════ CARACTERÍSTICAS ══════════════════ -->
-    <section id="caracteristicas" style="background: #0a0a18;">
+    <!-- ══════════════════════════════════════════════════
+     TEMA 2 — MICROSERVICIOS
+══════════════════════════════════════════════════ -->
+    <span class="section-anchor" id="microservicios"></span>
+    <section class="alt">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Características <span class="gradient-text">Principales</span></h2>
-                <p class="section-sub">Lo que define a un sistema basado en microservicios</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-purple"><i class="bi bi-plugin"></i></div>
-                        <h5>Desacoplamiento</h5>
-                        <p>Cada servicio puede desarrollarse, desplegarse y escalarse de forma totalmente independiente.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-pink"><i class="bi bi-database"></i></div>
-                        <h5>BD por servicio</h5>
-                        <p>Cada microservicio gestiona su propia base de datos, lo que evita dependencias de datos.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-green"><i class="bi bi-arrow-left-right"></i></div>
-                        <h5>Comunicación via API</h5>
-                        <p>Los servicios se comunican mediante APIs REST, eventos o colas de mensajes (Kafka, RabbitMQ).
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-blue"><i class="bi bi-shield-check"></i></div>
-                        <h5>Tolerancia a fallos</h5>
-                        <p>Si un servicio falla, los demás continúan operando, aumentando la resiliencia del sistema.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-green"><i class="bi bi-code-slash"></i></div>
-                        <h5>Polyglot</h5>
-                        <p>Cada equipo puede elegir el lenguaje y las herramientas más adecuadas para su servicio.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-purple"><i class="bi bi-people"></i></div>
-                        <h5>Equipos pequeños</h5>
-                        <p>Se promueve la regla de las "dos pizzas": equipos pequeños y multifuncionales por servicio.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-pink"><i class="bi bi-arrow-repeat"></i></div>
-                        <h5>CI/CD Continuo</h5>
-                        <p>Los pipelines de integración y entrega continua permiten despliegues frecuentes y seguros.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="feature-card">
-                        <div class="feature-icon icon-blue"><i class="bi bi-zoom-in"></i></div>
-                        <h5>Escalado independiente</h5>
-                        <p>Solo escala el servicio que lo necesita, no toda la aplicación — reduciendo costos.</p>
-                    </div>
+            <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="feat-icon ic-pink"
+                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
+                        class="bi bi-boxes"></i></div>
+                <div>
+                    <div class="section-tag" style="color:var(--secondary)">Tema 2</div>
+                    <h2 class="section-title mb-0"><span
+                            style="background:linear-gradient(90deg,var(--secondary),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Microservicios</span>
+                    </h2>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="divider div-pink"></div>
 
-    <!-- ══════════════════ BENEFICIOS / TIMELINE ══════════════════ -->
-    <section id="beneficios">
-        <div class="container">
-            <div class="row g-5">
+            <!-- Stats bar -->
+            <div class="stats-bar mb-5" style="background:linear-gradient(135deg,#2a0a1e,#3d1a2e);">
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:#ff6584;">87%</div>
+                        <div class="stat-label">de adoptantes confirman que vale la pena (IBM, 2021)</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:#ff6584;">700+</div>
+                        <div class="stat-label">microservicios gestiona Netflix en producción</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:#ff6584;">~10x</div>
+                        <div class="stat-label">mayor velocidad de despliegue vs. monolítico</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:#ff6584;">↓35%</div>
+                        <div class="stat-label">reducción promedio en costos de escalado</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mb-5">
                 <div class="col-lg-6">
-                    <h2 class="section-title">Beneficios para la <span class="gradient-text">Organización</span></h2>
-                    <div class="divider"></div>
+                    <h4 style="font-weight:700;color:#fff;">¿Qué son los Microservicios?</h4>
+                    <p style="color:#9090b0;">Los microservicios son un enfoque arquitectónico <strong
+                            style="color:#fff">nativo de la nube</strong> en el que una sola aplicación se conforma de
+                        muchos componentes pequeños, poco acoplados y desplegables de forma independiente. Cada servicio
+                        tiene su propia tecnología, base de datos y modelo de datos, comunicándose mediante <strong
+                            style="color:#fff">APIs REST</strong>, eventos o agentes de mensajes.</p>
+                    <p style="color:#9090b0;">A diferencia del monolito, donde todo vive en un único bloque, los
+                        microservicios permiten que equipos pequeños operen de forma autónoma sobre dominios acotados
+                        del negocio.</p>
                     <div class="timeline mt-4">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <h6>Desplegable de forma independiente</h6>
-                            <p>Ya no se requiere un esfuerzo masivo para cambiar una línea de código o agregar una nueva
-                                función. Se reduce el tiempo de ciclo de manera radical.</p>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--secondary);background:var(--secondary)"></div>
+                            <h6>Despliegue Independiente</h6>
+                            <p>Cada servicio se actualiza sin afectar al resto del sistema.</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot" style="background:var(--secondary)"></div>
-                            <h6>La herramienta adecuada para cada tarea</h6>
-                            <p>En lugar de una pila tecnológica única para toda la app, cada microservicio puede
-                                optimizar su stack (lenguaje, base de datos, framework).</p>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--cyan);background:var(--cyan)"></div>
+                            <h6>Tecnología Polyglot</h6>
+                            <p>Cada equipo elige el lenguaje y base de datos más adecuados.</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot" style="background:var(--accent)"></div>
-                            <h6>Escalado preciso y económico</h6>
-                            <p>Solo se escalan los componentes con mayor demanda, en lugar de replicar toda la
-                                aplicación — reduciendo el desperdicio de recursos.</p>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--accent);background:var(--accent)"></div>
+                            <h6>Escalado Granular</h6>
+                            <p>Solo escala el servicio con mayor demanda, no toda la app.</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot" style="background:#38bdf8"></div>
-                            <h6>Mayor agilidad y velocidad</h6>
-                            <p>Los equipos trabajan en paralelo, despliegan con frecuencia y reaccionan rápidamente al
-                                mercado sin bloquear el trabajo de otros.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot" style="background:#f59e0b"></div>
-                            <h6>Resiliencia ante fallos</h6>
-                            <p>El aislamiento entre servicios evita que un fallo se propague a toda la aplicación,
-                                mejorando la disponibilidad general del sistema.</p>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--orange);background:var(--orange)"></div>
+                            <h6>Tolerancia a Fallos</h6>
+                            <p>Un fallo aislado no tumba el sistema completo.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
-                    <div class="divider"></div>
-                    <div class="accordion mt-4" id="faqAccordion">
+                    <h4 style="font-weight:700;color:#fff;">Microservicios vs Monolito</h4>
+                    <div class="table-responsive mt-3">
+                        <table class="table table-dark table-bordered align-middle">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Criterio</th>
+                                    <th><i class="bi bi-box text-danger me-1"></i>Monolítico</th>
+                                    <th><i class="bi bi-boxes" style="color:var(--secondary)"></i> Microserv.</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td class="text-start fw-bold" style="color:#fff;">Despliegue</td>
+                                    <td>Único bloque</td>
+                                    <td style="color:var(--accent);">Independiente</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start fw-bold" style="color:#fff;">Escalado</td>
+                                    <td>Toda la app</td>
+                                    <td style="color:var(--accent);">Por servicio</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start fw-bold" style="color:#fff;">Tecnología</td>
+                                    <td>Una sola pila</td>
+                                    <td style="color:var(--accent);">Polyglot libre</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start fw-bold" style="color:#fff;">Resiliencia</td>
+                                    <td>Baja</td>
+                                    <td style="color:var(--accent);">Alta</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start fw-bold" style="color:#fff;">Equipo</td>
+                                    <td>Grande único</td>
+                                    <td style="color:var(--accent);">Pequeño x svc.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h5 class="mt-4" style="font-weight:700;color:#fff;">Casos de éxito</h5>
+                    <div class="row g-3 mt-1">
+                        <div class="col-4">
+                            <div class="feat-card p-2 text-center"><i class="bi bi-play-circle fs-3"
+                                    style="color:var(--secondary)"></i>
+                                <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
+                                    Netflix<br /><span style="color:#666;font-weight:400;">700+ servicios</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feat-card p-2 text-center"><i class="bi bi-cart fs-3"
+                                    style="color:var(--orange)"></i>
+                                <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
+                                    Amazon<br /><span style="color:#666;font-weight:400;">Pionero</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feat-card p-2 text-center"><i class="bi bi-car-front fs-3"
+                                    style="color:var(--cyan)"></i>
+                                <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
+                                    Uber<br /><span style="color:#666;font-weight:400;">Pagos & mapas</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video microservicios -->
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <div class="video-wrap">
+                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/rv4LlmLmVWk"
+                                title="Microservicios explicados" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h5 style="font-weight:700;color:#fff;">¿Por qué importan los microservicios?</h5>
+                    <p style="color:#9090b0;font-size:.92rem;">Los microservicios reflejan la forma en que las
+                        organizaciones modernas quieren estructurar sus equipos: pequeños, autónomos y orientados a un
+                        producto. Esta arquitectura facilita la adopción de metodologías ágiles y la entrega continua
+                        (CI/CD), acelerando el time-to-market.</p>
+                    <a href="https://www.youtube.com/watch?v=j3XufmvEMiM" target="_blank"
+                        class="btn btn-outline-primary btn-sm mt-2"><i class="bi bi-play-circle me-1"></i>Ver más
+                        material</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+     TEMA 3 — DESARROLLO DE UNA WEB API
+══════════════════════════════════════════════════ -->
+    <span class="section-anchor" id="desarrollo"></span>
+    <section>
+        <div class="container">
+            <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="feat-icon ic-blue"
+                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
+                        class="bi bi-code-slash"></i></div>
+                <div>
+                    <div class="section-tag" style="color:var(--cyan)">Tema 3</div>
+                    <h2 class="section-title mb-0"><span
+                            style="background:linear-gradient(90deg,var(--cyan),#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Desarrollo
+                            de una Web API</span></h2>
+                </div>
+            </div>
+            <div class="divider div-cyan"></div>
+
+            <div class="row g-5">
+                <!-- Recomendaciones -->
+                <div class="col-lg-6">
+                    <h4 style="font-weight:700;color:#fff;margin-bottom:1.2rem;">Recomendaciones clave</h4>
+                    <div class="step-item">
+                        <div class="step-circle" style="background:rgba(108,99,255,.2);color:var(--primary);">1</div>
+                        <div class="step-text">
+                            <h6>Definir los objetivos de la API</h6>
+                            <p>Antes de escribir una sola línea de código, comprende qué problemas resolverá y quiénes
+                                serán sus consumidores.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle" style="background:rgba(56,189,248,.2);color:var(--cyan);">2</div>
+                        <div class="step-text">
+                            <h6>Seguir estándares y convenciones</h6>
+                            <p>Aplica los principios REST, usa JSON o XML como formato de intercambio, y nombra
+                                endpoints de forma coherente y predecible.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle" style="background:rgba(67,233,123,.2);color:var(--accent);">3</div>
+                        <div class="step-text">
+                            <h6>Documentar exhaustivamente</h6>
+                            <p>Usa herramientas como <strong style="color:#fff">Swagger</strong> o <strong
+                                    style="color:#fff">Postman</strong> para generar documentación automática que otros
+                                desarrolladores puedan entender y usar.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle" style="background:rgba(255,101,132,.2);color:var(--secondary);">4</div>
+                        <div class="step-text">
+                            <h6>Priorizar la seguridad</h6>
+                            <p>Implementa autenticación (JWT, OAuth 2.0) y autorización, valida todas las entradas y usa
+                                HTTPS en todo momento.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-circle" style="background:rgba(251,146,60,.2);color:var(--orange);">5</div>
+                        <div class="step-text">
+                            <h6>Versionar la API</h6>
+                            <p>Versiona tu API (<code style="color:var(--cyan)">/v1/</code>, <code
+                                    style="color:var(--cyan)">/v2/</code>) para mantener compatibilidad hacia atrás sin
+                                romper integraciones existentes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proceso de desarrollo -->
+                <div class="col-lg-6">
+                    <h4 style="font-weight:700;color:#fff;margin-bottom:1.2rem;">Proceso de desarrollo</h4>
+                    <div class="accordion" id="devAccordion">
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq1">
-                                    ¿Cuál es la diferencia con una arquitectura monolítica?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">En una arquitectura monolítica toda la lógica de negocio
-                                    vive en una sola unidad deployable y muy acoplada. Los microservicios dividen esa
-                                    aplicación en servicios pequeños con responsabilidades delimitadas, cada uno
-                                    desplegable de forma independiente.</div>
+                            <h2 class="accordion-header"><button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#dev1">1. Análisis de
+                                    requerimientos</button></h2>
+                            <div id="dev1" class="accordion-collapse collapse show" data-bs-parent="#devAccordion">
+                                <div class="accordion-body">Identifica requisitos funcionales y no funcionales, casos de
+                                    uso, actores del sistema y los datos que se manipularán.</div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq2">
-                                    ¿Cuándo NO usar microservicios?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Para aplicaciones pequeñas o equipos reducidos, la
-                                    complejidad operacional de gestionar múltiples servicios puede superar los
-                                    beneficios. Un monolito bien diseñado puede ser la elección más práctica en ese
-                                    contexto.</div>
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#dev2">2. Planificación</button></h2>
+                            <div id="dev2" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
+                                <div class="accordion-body">Define objetivos, asigna recursos, estima tiempos y costos,
+                                    elige la metodología (Scrum, Kanban) y los frameworks del proyecto.</div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq3">
-                                    ¿Qué herramientas se usan con microservicios?
-                                </button>
-                            </h2>
-                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Docker y Kubernetes para contenedores y orquestación, API
-                                    Gateways (Kong, AWS API Gateway), message brokers (Kafka, RabbitMQ), herramientas de
-                                    observabilidad (Prometheus, Grafana, Jaeger) y CI/CD (Jenkins, GitHub Actions).
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#dev3">3. Diseño de la API</button></h2>
+                            <div id="dev3" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
+                                <div class="accordion-body">Define los endpoints, los métodos HTTP admitidos (GET, POST,
+                                    PUT, DELETE), los parámetros de solicitud/respuesta y el esquema de autenticación.
+                                    Ejemplo: <code>/posts</code>, <code>/posts/{id}</code>, <code>/comments</code>.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq4">
-                                    ¿Son lo mismo que los contenedores Docker?
-                                </button>
-                            </h2>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">No. Los microservicios son un <em>patrón
-                                        arquitectónico</em>; los contenedores son una <em>tecnología de
-                                        empaquetado</em>. Sin embargo, los contenedores son la forma más común de
-                                    desplegar microservicios porque garantizan portabilidad y aislamiento.</div>
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#dev4">4. Implementación</button></h2>
+                            <div id="dev4" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
+                                <div class="accordion-body">Desarrolla la API usando frameworks como
+                                    <strong>Express.js</strong> (Node.js), <strong>Flask / FastAPI</strong> (Python) o
+                                    <strong>Spring Boot</strong> (Java), siguiendo el diseño definido.
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq5">
-                                    ¿Qué empresas usan microservicios?
-                                </button>
-                            </h2>
-                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Netflix, Amazon, Uber, Spotify y LinkedIn son casos de éxito
-                                    emblemáticos. Netflix, por ejemplo, gestiona más de 700 microservicios para ofrecer
-                                    streaming a millones de usuarios simultáneos.</div>
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#dev5">5. Pruebas</button></h2>
+                            <div id="dev5" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
+                                <div class="accordion-body">Realiza pruebas unitarias, de integración y de carga.
+                                    Herramientas: <strong>Postman</strong>, <strong>Jest</strong>,
+                                    <strong>PyTest</strong>, <strong>JMeter</strong>.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#dev6">6. Documentación y
+                                    Despliegue</button></h2>
+                            <div id="dev6" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
+                                <div class="accordion-body">Crea documentación clara con Swagger/OpenAPI, despliega en
+                                    producción (AWS, GCP, Azure) y establece un sistema de monitoreo (Prometheus,
+                                    Grafana) para detectar problemas.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ══════════════════ COMPARACIÓN ══════════════════ -->
-    <section id="comparacion" style="background:#0a0a18;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Microservicios vs <span class="gradient-text">Otras Arquitecturas</span></h2>
-                <p class="section-sub">Diferencias clave entre los principales enfoques arquitectónicos</p>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-dark table-bordered table-hover align-middle rounded">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Criterio</th>
-                            <th><i class="bi bi-box text-danger me-1"></i>Monolítico</th>
-                            <th><i class="bi bi-diagram-3 text-warning me-1"></i>SOA</th>
-                            <th><i class="bi bi-boxes text-success me-1"></i>Microservicios</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Despliegue</td>
-                            <td>Único bloque</td>
-                            <td>Por servicio (pesado)</td>
-                            <td>Independiente y ágil</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Escalado</td>
-                            <td>Toda la app</td>
-                            <td>Servicio completo</td>
-                            <td>Componente específico</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Tecnología</td>
-                            <td>Una sola pila</td>
-                            <td>Estandarizada</td>
-                            <td>Polyglot libre</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Comunicación</td>
-                            <td>Llamadas internas</td>
-                            <td>ESB (bus)</td>
-                            <td>REST / Events / MQ</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Tamaño de equipo</td>
-                            <td>Grande único</td>
-                            <td>Múltiple</td>
-                            <td>Pequeño por servicio</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Resiliencia</td>
-                            <td>Baja</td>
-                            <td>Media</td>
-                            <td>Alta</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start fw-bold" style="color:#fff;">Complejidad operativa</td>
-                            <td>Baja</td>
-                            <td>Media-Alta</td>
-                            <td>Alta</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Image gallery using Bootstrap carousel (component #3) -->
+            <!-- Endpoints example -->
             <div class="row mt-5 g-4">
                 <div class="col-12">
-                    <h4 class="mb-4" style="font-weight:700;">Casos de uso en la industria</h4>
+                    <h4 style="font-weight:700;color:#fff;">Diseño de Endpoints — Ejemplo: API de Blog</h4>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100"
-                        style="background:var(--card-bg);border:1px solid rgba(108,99,255,0.2);border-radius:16px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/320px-Netflix_2015_logo.svg.png"
-                            class="card-img-top p-4" style="height:100px;object-fit:contain;background:#000;"
-                            alt="Netflix" onerror="this.style.display='none'" />
-                        <div class="card-body">
-                            <h6 class="card-title" style="color:#fff;">Netflix</h6>
-                            <p class="card-text" style="color:#9090b0;font-size:.9rem;">Migró de monolito a +700
-                                microservicios para gestionar 200M+ de usuarios con alta disponibilidad global.</p>
-                        </div>
+                <div class="col-md-6">
+                    <div class="code-block">
+                        <span class="cm">// Endpoints típicos de una API REST</span>
+
+                        <span class="kw">GET</span> <span class="url">/api/v1/posts</span> <span class="cm">← Lista de
+                            posts</span>
+                        <span class="kw">POST</span> <span class="url">/api/v1/posts</span> <span class="cm">← Crear
+                            post</span>
+                        <span class="kw">GET</span> <span class="url">/api/v1/posts/{id}</span> <span class="cm">← Post
+                            específico</span>
+                        <span class="kw">PUT</span> <span class="url">/api/v1/posts/{id}</span> <span class="cm">←
+                            Actualizar post</span>
+                        <span class="kw">DELETE</span> <span class="url">/api/v1/posts/{id}</span> <span class="cm">←
+                            Eliminar post</span>
+
+                        <span class="kw">GET</span> <span class="url">/api/v1/comments</span> <span class="cm">← Lista
+                            comentarios</span>
+                        <span class="kw">POST</span> <span class="url">/api/v1/comments</span> <span class="cm">← Nuevo
+                            comentario</span>
+                        <span class="kw">DELETE</span> <span class="url">/api/v1/comments/{id}</span> <span class="cm">←
+                            Eliminar comentario</span>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100"
-                        style="background:var(--card-bg);border:1px solid rgba(108,99,255,0.2);border-radius:16px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/320px-Amazon_logo.svg.png"
-                            class="card-img-top p-4" style="height:100px;object-fit:contain;background:#000;"
-                            alt="Amazon" onerror="this.style.display='none'" />
-                        <div class="card-body">
-                            <h6 class="card-title" style="color:#fff;">Amazon</h6>
-                            <p class="card-text" style="color:#9090b0;font-size:.9rem;">Pionero en la adopción. Creó AWS
-                                precisamente para gestionar su propio ecosistema de microservicios a escala masiva.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100"
-                        style="background:var(--card-bg);border:1px solid rgba(108,99,255,0.2);border-radius:16px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Uber_logo_2018.svg/320px-Uber_logo_2018.svg.png"
-                            class="card-img-top p-4" style="height:100px;object-fit:contain;background:#000;" alt="Uber"
-                            onerror="this.style.display='none'" />
-                        <div class="card-body">
-                            <h6 class="card-title" style="color:#fff;">Uber</h6>
-                            <p class="card-text" style="color:#9090b0;font-size:.9rem;">Adoptó microservicios para
-                                separar la lógica de viajes, pagos, mapas y notificaciones, escalando cada área
-                                independientemente.</p>
-                        </div>
+                <div class="col-md-6">
+                    <div class="code-block">
+                        <span class="cm">// Respuesta típica JSON de una API REST</span>
+                        {
+                        <span class="str">"status"</span>: <span class="str">"success"</span>,
+                        <span class="str">"data"</span>: {
+                        <span class="str">"id"</span>: 42,
+                        <span class="str">"title"</span>: <span class="str">"Introducción a REST"</span>,
+                        <span class="str">"author"</span>: <span class="str">"Mondragón, M."</span>,
+                        <span class="str">"createdAt"</span>: <span class="str">"2026-03-04T10:00:00Z"</span>,
+                        <span class="str">"tags"</span>: [<span class="str">"API"</span>, <span
+                            class="str">"REST"</span>, <span class="str">"Web"</span>]
+                        },
+                        <span class="str">"meta"</span>: { <span class="str">"version"</span>: <span
+                            class="str">"v1"</span> }
+                        }
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════ VIDEO ══════════════════ -->
-    <section id="video">
+    <!-- ══════════════════════════════════════════════════
+     TEMA 4 — MANEJO DE CONTENEDORES
+══════════════════════════════════════════════════ -->
+    <span class="section-anchor" id="contenedores"></span>
+    <section class="alt">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Material de <span class="gradient-text">Apoyo Visual</span></h2>
-                <p class="section-sub">Videos explicativos sobre microservicios</p>
+            <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="feat-icon ic-green"
+                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
+                        class="bi bi-box-seam"></i></div>
+                <div>
+                    <div class="section-tag" style="color:var(--accent)">Tema 4</div>
+                    <h2 class="section-title mb-0"><span
+                            style="background:linear-gradient(90deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Manejo
+                            de Contenedores</span></h2>
+                </div>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-8">
+            <div class="divider div-green"></div>
+
+            <!-- Stats bar -->
+            <div class="stats-bar mb-5" style="background:linear-gradient(135deg,#0a1f12,#0d2a1a);">
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--accent);">Ligeros</div>
+                        <div class="stat-label">Comparten el SO del host, sin hypervisor</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--accent);">Portables</div>
+                        <div class="stat-label">Funcionan igual en dev, staging y producción</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--accent);">Aislados</div>
+                        <div class="stat-label">Cada contenedor tiene su propio espacio</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--accent);">Escalables</div>
+                        <div class="stat-label">Orquestados con Kubernetes fácilmente</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-6">
+                    <h4 style="font-weight:700;color:#fff;">¿Qué es un Contenedor?</h4>
+                    <p style="color:#9090b0;">Los contenedores son <strong style="color:#fff">paquetes ligeros de
+                            software</strong> que incluyen todo lo necesario para ejecutar una aplicación en cualquier
+                        entorno: código, runtime, bibliotecas y configuración. Al virtualizar el sistema operativo en
+                        lugar del hardware, son mucho más eficientes que las máquinas virtuales.</p>
+                    <p style="color:#9090b0;">Google usa contenedores para todo: Gmail, YouTube, la Búsqueda. La
+                        tecnología evolucionó hasta convertirse en <strong style="color:#fff">Docker</strong>
+                        (contenedores) y <strong style="color:#fff">Kubernetes</strong> (orquestación), las herramientas
+                        estándar de la industria.</p>
+                    <h5 class="mt-4" style="font-weight:700;color:#fff;">Contenedores vs Máquinas Virtuales</h5>
+                    <div class="table-responsive mt-2">
+                        <table class="table table-dark table-bordered table-sm align-middle">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Aspecto</th>
+                                    <th><i class="bi bi-hdd-network me-1"></i>VM</th>
+                                    <th><i class="bi bi-box-seam me-1"></i>Contenedor</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" style="font-size:.85rem;">
+                                <tr>
+                                    <td class="text-start" style="color:#fff;">Arranque</td>
+                                    <td>Minutos</td>
+                                    <td style="color:var(--accent);">Segundos</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start" style="color:#fff;">Tamaño</td>
+                                    <td>GB</td>
+                                    <td style="color:var(--accent);">MB</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start" style="color:#fff;">SO propio</td>
+                                    <td>Sí (completo)</td>
+                                    <td style="color:var(--accent);">No (comparte)</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start" style="color:#fff;">Portabilidad</td>
+                                    <td>Media</td>
+                                    <td style="color:var(--accent);">Alta</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start" style="color:#fff;">Densidad</td>
+                                    <td>Baja</td>
+                                    <td style="color:var(--accent);">Alta</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 style="font-weight:700;color:#fff;">Docker — El estándar de contenedores</h4>
+                    <p style="color:#9090b0;font-size:.92rem;">Docker es la plataforma más usada para crear y ejecutar
+                        contenedores. Con un simple <code style="color:var(--cyan)">Dockerfile</code> defines el entorno
+                        de tu aplicación y la empaquetas de forma reproducible.</p>
+                    <div class="code-block mt-3">
+                        <span class="cm"># Dockerfile de ejemplo — Node.js API</span>
+                        <span class="kw">FROM</span> node:20-alpine
+                        <span class="kw">WORKDIR</span> /app
+                        <span class="kw">COPY</span> package*.json ./
+                        <span class="kw">RUN</span> npm install --production
+                        <span class="kw">COPY</span> . .
+                        <span class="kw">EXPOSE</span> 3000
+                        <span class="kw">CMD</span> [<span class="str">"node"</span>, <span
+                            class="str">"index.js"</span>]
+                    </div>
+                    <div class="code-block mt-3">
+                        <span class="cm"># Comandos Docker esenciales</span>
+                        docker build -t mi-api:v1 .
+                        docker run -p 3000:3000 mi-api:v1
+                        docker ps <span class="cm"># contenedores activos</span>
+                        docker-compose up -d <span class="cm"># multi-contenedor</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kubernetes -->
+            <h4 style="font-weight:700;color:#fff;" class="mb-4">Kubernetes — Orquestación de contenedores</h4>
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-diagram-3"></i></div>
+                        <h5>Arquitectura de clúster</h5>
+                        <p>Un clúster Kubernetes tiene un <strong style="color:#fff">Nodo Control Plane</strong> que
+                            gestiona el estado deseado del sistema y múltiples <strong style="color:#fff">Nodos
+                                Worker</strong> que ejecutan los contenedores.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="feat-icon ic-blue"><i class="bi bi-boxes"></i></div>
+                        <h5>Pods y Deployments</h5>
+                        <p>El <strong style="color:#fff">Pod</strong> es la unidad mínima de Kubernetes (1+
+                            contenedores). Un <strong style="color:#fff">Deployment</strong> gestiona replicas y
+                            rollbacks automáticos de pods.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-arrow-repeat"></i></div>
+                        <h5>Auto-Scaling</h5>
+                        <p>Kubernetes puede escalar automáticamente el número de pods según la demanda (CPU, memoria),
+                            garantizando disponibilidad sin desperdicio de recursos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="feat-icon ic-blue"><i class="bi bi-shield-lock"></i></div>
+                        <h5>Secrets & ConfigMaps</h5>
+                        <p>Gestiona credenciales y configuraciones de forma segura sin hardcodear valores sensibles en
+                            las imágenes de los contenedores.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-hdd-stack"></i></div>
+                        <h5>Persistent Volumes</h5>
+                        <p>Permite que los contenedores almacenen datos que persisten más allá del ciclo de vida del
+                            pod, con soporte para múltiples proveedores de almacenamiento.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="feat-icon ic-blue"><i class="bi bi-globe"></i></div>
+                        <h5>Servicios & Ingress</h5>
+                        <p>Los <strong style="color:#fff">Services</strong> exponen pods como endpoints de red. El
+                            <strong style="color:#fff">Ingress</strong> gestiona el tráfico externo con soporte de
+                            dominio y HTTPS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video contenedores -->
+            <div class="row g-4 align-items-center mt-2">
+                <div class="col-lg-7">
                     <div class="video-wrap">
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/rv4LlmLmVWk" title="¿Qué son los Microservicios?"
-                                allowfullscreen></iframe>
-                        </div>
+                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/Wfh6sFkSbdo"
+                                title="Docker y Kubernetes explicados" allowfullscreen></iframe></div>
                     </div>
-                    <p class="text-center mt-2" style="font-size:.85rem;color:#666;">¿Qué son los microservicios? —
-                        Explicación visual</p>
                 </div>
-                <div class="col-lg-4">
-                    <div class="d-flex flex-column gap-3 h-100 justify-content-center">
-                        <div class="feature-card">
-                            <div class="feature-icon icon-purple"><i class="bi bi-play-circle-fill"></i></div>
-                            <h5>¿Por qué microservicios?</h5>
-                            <p>Conoce las razones por las que empresas líderes están adoptando esta arquitectura.</p>
-                            <a href="https://www.youtube.com/watch?v=j3XufmvEMiM" target="_blank"
-                                class="btn btn-outline-primary btn-sm mt-2">Ver en YouTube</a>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon icon-pink"><i class="bi bi-camera-video-fill"></i></div>
-                            <h5>Microservicios con Docker</h5>
-                            <p>Aprende a contenerizar microservicios usando Docker y Docker Compose.</p>
-                            <a href="https://www.youtube.com/watch?v=Wfh6sFkSbdo" target="_blank"
-                                class="btn btn-outline-primary btn-sm mt-2">Ver en YouTube</a>
-                        </div>
+                <div class="col-lg-5">
+                    <h5 style="font-weight:700;color:#fff;">¿Por qué los contenedores revolucionaron el desarrollo?</h5>
+                    <p style="color:#9090b0;font-size:.92rem;">Los contenedores resolvieron el clásico problema de
+                        <em>"en mi máquina funciona"</em>. Al empaquetar la aplicación junto con todas sus dependencias,
+                        garantizan que el comportamiento sea idéntico en cualquier entorno: laptop del desarrollador,
+                        servidor de staging o producción en la nube.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="topic-pill" style="border-color:var(--accent);color:var(--accent);"><i
+                                class="bi bi-check-circle"></i>Docker</span>
+                        <span class="topic-pill" style="border-color:var(--cyan);color:var(--cyan);"><i
+                                class="bi bi-check-circle"></i>Kubernetes</span>
+                        <span class="topic-pill" style="border-color:var(--primary);color:var(--primary);"><i
+                                class="bi bi-check-circle"></i>Docker Compose</span>
+                        <span class="topic-pill" style="border-color:var(--orange);color:var(--orange);"><i
+                                class="bi bi-check-circle"></i>Helm Charts</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════ MAPA ══════════════════ -->
-    <section id="mapa" style="background:#0a0a18;">
+    <!-- ══════════════════════════════════════════════════
+     TEMA 5 — APLICACIONES PARA LA NUBE
+══════════════════════════════════════════════════ -->
+    <span class="section-anchor" id="nube"></span>
+    <section>
         <div class="container">
-            <div class="text-center mb-5">
+            <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="feat-icon ic-orange"
+                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
+                        class="bi bi-cloud"></i></div>
+                <div>
+                    <div class="section-tag" style="color:var(--orange)">Tema 5</div>
+                    <h2 class="section-title mb-0"><span
+                            style="background:linear-gradient(90deg,var(--orange),#facc15);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Aplicaciones
+                            para la Nube</span></h2>
+                </div>
+            </div>
+            <div class="divider div-orange"></div>
+
+            <!-- Stats bar -->
+            <div class="stats-bar mb-5" style="background:linear-gradient(135deg,#1a0f00,#2a1a00);">
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--orange);">94%</div>
+                        <div class="stat-label">de empresas usan algún servicio en la nube (Flexera, 2024)</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--orange);">$679B</div>
+                        <div class="stat-label">mercado global de cloud computing en 2024</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--orange);">3 modelos</div>
+                        <div class="stat-label">IaaS, PaaS y SaaS definen la nube</div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-number" style="color:var(--orange);">5 pilares</div>
+                        <div class="stat-label">del Well-Architected Framework (AWS)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-lg-6">
+                    <h4 style="font-weight:700;color:#fff;">¿Qué es el Cloud Computing?</h4>
+                    <p style="color:#9090b0;">El <strong style="color:#fff">cómputo en la nube</strong> es la entrega de
+                        recursos informáticos —servidores, almacenamiento, bases de datos, redes, software e
+                        inteligencia— a través de internet ("la nube") bajo un modelo de pago por uso. Elimina la
+                        necesidad de adquirir y mantener infraestructura física.</p>
+                    <p style="color:#9090b0;">Una <strong style="color:#fff">aplicación nativa de la nube
+                            (cloud-native)</strong> es aquella diseñada desde cero para aprovechar las ventajas del
+                        cloud: escalado elástico, alta disponibilidad, despliegue automatizado y resiliencia ante
+                        fallos.</p>
+
+                    <h5 class="mt-4" style="font-weight:700;color:#fff;">Modelos de servicio</h5>
+                    <div class="timeline mt-3">
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--orange);background:var(--orange)"></div>
+                            <h6>IaaS — Infraestructura como Servicio</h6>
+                            <p>El proveedor ofrece infraestructura virtualizada (VMs, redes, almacenamiento). Tú
+                                controlas el SO y las aplicaciones. Ej: AWS EC2, Azure VMs, Google Compute Engine.</p>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:#facc15;background:#facc15"></div>
+                            <h6>PaaS — Plataforma como Servicio</h6>
+                            <p>El proveedor gestiona la infraestructura y el SO. Tú solo despliegas tu código. Ej:
+                                Heroku, Google App Engine, AWS Elastic Beanstalk.</p>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--cyan);background:var(--cyan)"></div>
+                            <h6>SaaS — Software como Servicio</h6>
+                            <p>El proveedor gestiona todo. Tú solo usas la aplicación vía navegador. Ej: Gmail,
+                                Salesforce, Microsoft 365, Slack.</p>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot" style="color:var(--accent);background:var(--accent)"></div>
+                            <h6>FaaS — Funciones como Servicio (Serverless)</h6>
+                            <p>Ejecutas código en respuesta a eventos sin gestionar servidores. Solo pagas por
+                                ejecución. Ej: AWS Lambda, Google Cloud Functions, Azure Functions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h4 style="font-weight:700;color:#fff;">Características de las Apps Cloud-Native</h4>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="feat-card orange">
+                                <div class="feat-icon ic-orange"><i class="bi bi-arrows-fullscreen"></i></div>
+                                <h5>Escalado Elástico</h5>
+                                <p>Se escalan automáticamente según la demanda, sin intervención manual.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feat-card orange">
+                                <div class="feat-icon ic-orange"><i class="bi bi-shield-check"></i></div>
+                                <h5>Alta Disponibilidad</h5>
+                                <p>Desplegadas en múltiples regiones y zonas para garantizar 99.9%+ de uptime.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feat-card orange">
+                                <div class="feat-icon ic-orange"><i class="bi bi-robot"></i></div>
+                                <h5>DevOps & CI/CD</h5>
+                                <p>Pipelines automáticos de integración, pruebas y despliegue continuo.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feat-card orange">
+                                <div class="feat-icon ic-orange"><i class="bi bi-eye"></i></div>
+                                <h5>Observabilidad</h5>
+                                <p>Métricas, logs y trazas distribuidas para monitorear el estado en tiempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 style="font-weight:700;color:#fff;">Principales proveedores Cloud</h5>
+                    <div class="row g-3 mt-1">
+                        <div class="col-4">
+                            <div class="feat-card text-center p-3">
+                                <i class="bi bi-amazon fs-2" style="color:#FF9900;"></i>
+                                <p class="mt-2 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
+                                    Amazon<br />Web Services</p>
+                                <p style="font-size:.72rem;color:#666;margin:2px 0 0;">EC2, S3, Lambda, EKS</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feat-card text-center p-3">
+                                <i class="bi bi-microsoft fs-2" style="color:#00a4ef;"></i>
+                                <p class="mt-2 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
+                                    Microsoft<br />Azure</p>
+                                <p style="font-size:.72rem;color:#666;margin:2px 0 0;">AKS, Functions, CosmosDB</p>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="feat-card text-center p-3">
+                                <i class="bi bi-google fs-2" style="color:#4285F4;"></i>
+                                <p class="mt-2 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
+                                    Google<br />Cloud</p>
+                                <p style="font-size:.72rem;color:#666;margin:2px 0 0;">GKE, Cloud Run, BigQuery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The 12 Factor App -->
+            <h4 style="font-weight:700;color:#fff;" class="mb-1">La metodología <span
+                    style="color:var(--orange);">12-Factor App</span></h4>
+            <p style="color:#9090b0;font-size:.9rem;margin-bottom:1.5rem;">Un conjunto de buenas prácticas para
+                construir aplicaciones cloud-native robustas, portables y mantenibles.</p>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card orange p-3 text-center"><span
+                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">I</span>
+                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Codebase<br />(1 repo)</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card orange p-3 text-center"><span
+                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">II</span>
+                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Dependencias declaradas</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card orange p-3 text-center"><span
+                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">III</span>
+                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Config en entorno</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card orange p-3 text-center"><span
+                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">IV</span>
+                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Servicios como recursos</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card orange p-3 text-center"><span
+                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">V</span>
+                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Build, Release, Run</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="feat-card orange p-3 text-center"><span
+                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">VI–XII</span>
+                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Procesos, Puertos, Logs…</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video nube -->
+            <div class="row g-4 align-items-center mt-4">
+                <div class="col-lg-7">
+                    <div class="video-wrap">
+                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/M988_fsOSWo"
+                                title="Cloud Computing explicado" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h5 style="font-weight:700;color:#fff;">¿Por qué migrar a la nube?</h5>
+                    <p style="color:#9090b0;font-size:.92rem;">La nube no es solo infraestructura: es un cambio de
+                        paradigma. Permite a equipos pequeños construir y operar aplicaciones que compiten con grandes
+                        empresas, sin necesidad de invertir en servidores físicos. La combinación de microservicios,
+                        contenedores y servicios cloud es la base del desarrollo moderno.</p>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="topic-pill" style="border-color:var(--orange);color:var(--orange);"><i
+                                class="bi bi-check-circle"></i>Escalable</span>
+                        <span class="topic-pill" style="border-color:#facc15;color:#facc15;"><i
+                                class="bi bi-check-circle"></i>Económico</span>
+                        <span class="topic-pill" style="border-color:var(--accent);color:var(--accent);"><i
+                                class="bi bi-check-circle"></i>Global</span>
+                        <span class="topic-pill" style="border-color:var(--cyan);color:var(--cyan);"><i
+                                class="bi bi-check-circle"></i>Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+     MAPA
+══════════════════════════════════════════════════ -->
+    <section class="alt" id="mapa" style="padding:60px 0;">
+        <div class="container">
+            <div class="text-center mb-4">
                 <h2 class="section-title">Ubicación de <span class="gradient-text">Referencia</span></h2>
-                <p class="section-sub">Amazon Web Services — Sede principal en Seattle, WA (pioneros en microservicios)
-                </p>
+                <p style="color:#666;font-size:.9rem;">Google Cloud — Mountain View, CA. Pioneros en contenedores y
+                    Kubernetes.</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="map-wrap">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.9975098844063!2d-122.33694968446835!3d47.62268637918727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490158de5678b9d%3A0x9f3dc75a5fbf7fa9!2sAmazon%20Headquarters!5e0!3m2!1ses!2smx!4v1680000000000!5m2!1ses!2smx"
-                            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.3920433658655!2d-122.08499988469093!3d37.42199997982596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1ses!2smx!4v1680000000001!5m2!1ses!2smx"
+                            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <p class="text-center mt-3" style="color:#666;font-size:.88rem;">
-                        <i class="bi bi-geo-alt-fill text-danger me-1"></i>Amazon HQ — Seattle, Washington, EE.UU. —
-                        Empresa pionera en la adopción de microservicios a escala industrial.
-                    </p>
+                    <p class="text-center mt-2" style="font-size:.82rem;color:#555;"><i
+                            class="bi bi-geo-alt-fill text-danger me-1"></i>Googleplex — Mountain View, CA, EE.UU. —
+                        Sede de Google Cloud y cuna de Kubernetes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════ MODAL INFORMACIÓN ══════════════════ -->
-    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <!-- ════════════════════ MODAL GLOSARIO ════════════════════ -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="infoModalLabel"><i
-                            class="bi bi-info-circle-fill text-primary me-2"></i>Glosario de Microservicios</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Cerrar"></button>
+                    <h5 class="modal-title"><i class="bi bi-journal-code me-2 text-primary"></i>Glosario — Unidad II
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <div class="feature-card p-3">
-                                <div class="feature-icon icon-purple" style="width:40px;height:40px;font-size:1.1rem;">
-                                    <i class="bi bi-diagram-2"></i>
-                                </div>
-                                <h6 style="color:#fff;margin-top:.5rem;">API Gateway</h6>
-                                <p style="font-size:.85rem;">Punto de entrada único que enruta solicitudes a los
-                                    microservicios correspondientes. Gestiona autenticación, rate limiting y logging.
-                                </p>
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-purple" style="width:36px;height:36px;font-size:1rem;"><i
+                                        class="bi bi-plug"></i></div>
+                                <h6 style="color:#fff;margin-top:.4rem;">API Gateway</h6>
+                                <p style="font-size:.82rem;">Punto de entrada único para todos los microservicios.
+                                    Gestiona autenticación, rate-limiting y enrutamiento.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="feature-card p-3">
-                                <div class="feature-icon icon-green" style="width:40px;height:40px;font-size:1.1rem;"><i
-                                        class="bi bi-broadcast"></i></div>
-                                <h6 style="color:#fff;margin-top:.5rem;">Event-Driven</h6>
-                                <p style="font-size:.85rem;">Patrón donde los servicios se comunican mediante eventos
-                                    publicados en un bus (Kafka, RabbitMQ), reduciendo el acoplamiento directo.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-card p-3">
-                                <div class="feature-icon icon-pink" style="width:40px;height:40px;font-size:1.1rem;"><i
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-pink" style="width:36px;height:36px;font-size:1rem;"><i
                                         class="bi bi-activity"></i></div>
-                                <h6 style="color:#fff;margin-top:.5rem;">Circuit Breaker</h6>
-                                <p style="font-size:.85rem;">Patrón de resiliencia que detiene llamadas a servicios
-                                    fallidos para evitar cascadas de errores en el sistema.</p>
+                                <h6 style="color:#fff;margin-top:.4rem;">Circuit Breaker</h6>
+                                <p style="font-size:.82rem;">Patrón de resiliencia que detiene llamadas a servicios
+                                    fallidos para evitar cascadas de errores.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="feature-card p-3">
-                                <div class="feature-icon icon-blue" style="width:40px;height:40px;font-size:1.1rem;"><i
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-blue" style="width:36px;height:36px;font-size:1rem;"><i
                                         class="bi bi-search"></i></div>
-                                <h6 style="color:#fff;margin-top:.5rem;">Service Discovery</h6>
-                                <p style="font-size:.85rem;">Mecanismo por el cual los servicios se registran y se
-                                    encuentran dinámicamente (Consul, Eureka, Kubernetes DNS).</p>
+                                <h6 style="color:#fff;margin-top:.4rem;">Service Discovery</h6>
+                                <p style="font-size:.82rem;">Mecanismo por el cual los servicios se registran y se
+                                    localizan dinámicamente (Consul, Eureka, K8s DNS).</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-green" style="width:36px;height:36px;font-size:1rem;"><i
+                                        class="bi bi-layers"></i></div>
+                                <h6 style="color:#fff;margin-top:.4rem;">Orquestación</h6>
+                                <p style="font-size:.82rem;">Gestión automatizada del ciclo de vida de contenedores:
+                                    despliegue, escalado, networking y almacenamiento.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-orange" style="width:36px;height:36px;font-size:1rem;"><i
+                                        class="bi bi-key"></i></div>
+                                <h6 style="color:#fff;margin-top:.4rem;">JWT / OAuth 2.0</h6>
+                                <p style="font-size:.82rem;">Estándares de autenticación y autorización para APIs. JWT =
+                                    tokens firmados. OAuth = delegación de permisos.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-purple" style="width:36px;height:36px;font-size:1rem;"><i
+                                        class="bi bi-broadcast"></i></div>
+                                <h6 style="color:#fff;margin-top:.4rem;">Serverless</h6>
+                                <p style="font-size:.82rem;">Modelo donde el código se ejecuta en funciones sin
+                                    gestionar servidores. Pago por ejecución (AWS Lambda).</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
-                </div>
+                <div class="modal-footer"><button class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button></div>
             </div>
         </div>
     </div>
 
-    <!-- ══════════════════ MODAL CONTACTO (con formulario validado) ══════════════════ -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <!-- ════════════════════ MODAL CONTACTO ════════════════════ -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel"><i
-                            class="bi bi-envelope-fill text-primary me-2"></i>Formulario de Contacto</h5>
+                    <h5 class="modal-title"><i class="bi bi-envelope-fill text-primary me-2"></i>Formulario de Contacto
+                    </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="formSuccess" class="alert alert-success d-none">
-                        <i class="bi bi-check-circle me-2"></i>¡Mensaje enviado correctamente!
-                    </div>
+                    <div id="formSuccess" class="alert alert-success d-none"><i
+                            class="bi bi-check-circle me-2"></i>¡Mensaje enviado correctamente!</div>
                     <div id="contactForm">
                         <div class="mb-3">
                             <label class="form-label">Nombre completo *</label>
@@ -594,128 +1159,68 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Institución / Empresa *</label>
-                            <input type="text" id="finst" class="form-control" placeholder="Ej: Universidad XYZ" />
+                            <input type="text" id="finst" class="form-control" placeholder="Ej: LITIC — 6°A" />
                             <div class="invalid-feedback">Este campo es obligatorio.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Tema de interés *</label>
                             <select id="ftopic" class="form-select">
                                 <option value="">-- Selecciona un tema --</option>
-                                <option value="microservicios">Microservicios</option>
-                                <option value="webapi">Web APIs</option>
-                                <option value="contenedores">Contenedores / Docker</option>
-                                <option value="nube">Desarrollo en la nube</option>
+                                <option>Web APIs</option>
+                                <option>Microservicios</option>
+                                <option>Desarrollo de una Web API</option>
+                                <option>Contenedores (Docker / Kubernetes)</option>
+                                <option>Aplicaciones para la nube</option>
                             </select>
-                            <div class="invalid-feedback">Selecciona al menos un tema de interés.</div>
+                            <div class="invalid-feedback">Selecciona un tema de interés.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Mensaje *</label>
                             <textarea id="fmsg" class="form-control" rows="3"
-                                placeholder="Escribe tu pregunta o comentario..."></textarea>
+                                placeholder="Tu pregunta o comentario..."></textarea>
                             <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="validateForm()">
-                        <i class="bi bi-send me-1"></i>Enviar
-                    </button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" onclick="validateForm()"><i
+                            class="bi bi-send me-1"></i>Enviar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ══════════════════ FOOTER ══════════════════ -->
+    <!-- ════════════════════ FOOTER ════════════════════ -->
     <footer>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <strong style="color:#a0a0c0;"><i class="bi bi-boxes me-1 text-primary"></i>MicroServicios</strong>
-                    — Desarrollo Web · 6°A · 2026
-                    <br /><small>Profesor: Dr. en C. Margarita Mondragón Arellano</small>
+            <div class="row align-items-center g-3">
+                <div class="col-md-5">
+                    <strong style="color:#a0a0c0;"><i class="bi bi-cpu-fill me-1"
+                            style="color:var(--primary)"></i>Unidad II — Programación del Lado del
+                        Servidor</strong><br />
+                    <small>Desarrollo Web · 6°A · LITIC · 2026<br />
+                        Profra: Dr. en C. Margarita Mondragón Arellano</small>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <small>Fuentes: <a href="https://www.ibm.com/mx-es/topics/microservices" target="_blank">IBM</a> ·
-                        <a href="https://aws.amazon.com/es/microservices/" target="_blank">AWS</a> · <a
-                            href="https://www.intel.la/content/www/xl/es/cloud-computing/microservices.html"
-                            target="_blank">Intel</a></small>
+                <div class="col-md-4 text-md-center">
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#infoModal">
+                        <i class="bi bi-journal-code me-1"></i>Glosario
+                    </button>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <small style="color:#444;">Fuentes: <a href="https://aws.amazon.com/es/what-is/api/"
+                            target="_blank">AWS</a> · <a href="https://www.ibm.com/mx-es/topics/microservices"
+                            target="_blank">IBM</a> · <a href="https://kubernetes.io/es/docs/concepts/architecture/"
+                            target="_blank">Kubernetes</a> · <a
+                            href="https://cloud.google.com/learn/what-are-containers?hl=es" target="_blank">Google
+                            Cloud</a></small>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        // ─── FORM VALIDATION ───
-        function validateForm() {
-            let valid = true;
-
-            const fields = [
-                { id: 'fname', check: v => v.trim().length >= 3 },
-                { id: 'femail', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
-                { id: 'finst', check: v => v.trim().length > 0 },
-                { id: 'ftopic', check: v => v !== '' },
-                { id: 'fmsg', check: v => v.trim().length >= 10 },
-            ];
-
-            fields.forEach(({ id, check }) => {
-                const el = document.getElementById(id);
-                if (check(el.value)) {
-                    el.classList.remove('is-invalid');
-                    el.classList.add('is-valid');
-                } else {
-                    el.classList.remove('is-valid');
-                    el.classList.add('is-invalid');
-                    valid = false;
-                }
-            });
-
-            if (valid) {
-                document.getElementById('contactForm').classList.add('d-none');
-                document.getElementById('formSuccess').classList.remove('d-none');
-                setTimeout(() => {
-                    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-                    modal.hide();
-                    // reset
-                    setTimeout(() => {
-                        document.getElementById('contactForm').classList.remove('d-none');
-                        document.getElementById('formSuccess').classList.add('d-none');
-                        fields.forEach(({ id }) => {
-                            const el = document.getElementById(id);
-                            el.value = '';
-                            el.classList.remove('is-valid', 'is-invalid');
-                        });
-                    }, 500);
-                }, 2000);
-            }
-        }
-
-        // ─── SMOOTH SCROLL ───
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        // ─── NAVBAR ACTIVE ON SCROLL ───
-        const sections = document.querySelectorAll('section[id], div[id="inicio"]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(s => {
-                if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
-            });
-            navLinks.forEach(l => {
-                l.classList.remove('active');
-                if (l.getAttribute('href') === '#' + current) l.classList.add('active');
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
