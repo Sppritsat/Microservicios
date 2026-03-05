@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
         rel="stylesheet" />
-
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -53,7 +52,7 @@
                     <h1 class="mb-2">
                         <span class="gradient-text">Programación del lado</span><br />del servidor
                     </h1>
-                    <p style="color:#9090b0;font-size:1.05rem;max-width:580px;margin-bottom:1.5rem;">
+                    <p class="hero-sub">
                         Explora los fundamentos de las Web APIs, la arquitectura de microservicios, el desarrollo de
                         APIs, la gestión de contenedores y las aplicaciones para la nube moderna.
                     </p>
@@ -63,7 +62,7 @@
                         <a href="#desarrollo" class="hero-nav-card"><i class="bi bi-code-slash"></i>Desarrollo de
                             API</a>
                         <a href="#contenedores" class="hero-nav-card"><i class="bi bi-box-seam"></i>Contenedores</a>
-                        <a href="#nube" class="hero-nav-card"><i class="bi bi-cloud"></i>Aplicaciones Nube</a>
+                        <a href="#nube" class="hero-nav-card"><i class="bi bi-cloud"></i>Apps Nube</a>
                     </div>
                 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
@@ -75,13 +74,11 @@
                             </radialGradient>
                         </defs>
                         <ellipse cx="200" cy="160" rx="160" ry="140" fill="url(#glow)" />
-                        <!-- Central node -->
                         <circle cx="200" cy="160" r="36" fill="#1a1a2e" stroke="#6c63ff" stroke-width="2" />
                         <text x="200" y="155" text-anchor="middle" fill="#6c63ff" font-size="11"
                             font-weight="700">Web</text>
                         <text x="200" y="170" text-anchor="middle" fill="#6c63ff" font-size="11"
                             font-weight="700">APIs</text>
-                        <!-- Nodes -->
                         <circle cx="90" cy="80" r="28" fill="#1a1a2e" stroke="#ff6584" stroke-width="1.5" />
                         <text x="90" y="76" text-anchor="middle" fill="#ff6584" font-size="9"
                             font-weight="700">Micro-</text>
@@ -102,7 +99,6 @@
                             font-weight="700">Apps</text>
                         <text x="320" y="268" text-anchor="middle" fill="#fb923c" font-size="9"
                             font-weight="700">Nube</text>
-                        <!-- Lines -->
                         <line x1="200" y1="124" x2="108" y2="100" stroke="#6c63ff" stroke-width="1" stroke-opacity=".5"
                             stroke-dasharray="4,3" />
                         <line x1="200" y1="124" x2="293" y2="100" stroke="#38bdf8" stroke-width="1" stroke-opacity=".5"
@@ -117,17 +113,16 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      TEMA 1 — TECNOLOGÍAS DE WEB APIs
-══════════════════════════════════════════════════ -->
+══════════════════════════════════════════════ -->
     <span class="section-anchor" id="webapis"></span>
     <section>
         <div class="container">
-            <!-- Header -->
+
+            <!-- Encabezado de tema -->
             <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="feat-icon ic-purple"
-                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
-                        class="bi bi-cloud-fill"></i></div>
+                <div class="feat-icon ic-purple topic-icon"><i class="bi bi-cloud-fill"></i></div>
                 <div>
                     <div class="section-tag">Tema 1</div>
                     <h2 class="section-title mb-0">Tecnologías de <span class="gradient-text">Web APIs</span></h2>
@@ -135,160 +130,274 @@
             </div>
             <div class="divider div-purple"></div>
 
+            <!-- Definición + imagen arquitectura REST -->
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">¿Qué es una API?</h4>
-                    <p style="color:#9090b0;">Una <strong style="color:#fff">API (Application Programming
-                            Interface)</strong> es un conjunto de mecanismos y reglas que permiten a dos componentes de
-                        software comunicarse entre sí mediante un conjunto de definiciones y protocolos. Actúa como una
-                        capa intermedia que procesa las transferencias de datos entre sistemas.</p>
-                    <p style="color:#9090b0;">En el contexto web, una <strong style="color:#fff">Web API</strong> expone
-                        funcionalidades de un servidor a través del protocolo HTTP, permitiendo que cualquier cliente
-                        —web, móvil, IoT— consuma datos y servicios de forma estandarizada.</p>
+                    <h4 class="sub-title">¿Qué es una API?</h4>
+                    <p class="body-text">
+                        Una <strong class="hl">API (Application Programming Interface)</strong> es un conjunto de
+                        mecanismos y reglas que permiten a dos componentes de software comunicarse entre sí mediante
+                        definiciones y protocolos estandarizados. Actúa como una <strong class="hl">capa
+                            intermedia</strong> que procesa las transferencias de datos entre sistemas, permitiendo a
+                        las empresas abrir sus datos y funcionalidades a desarrolladores externos, socios comerciales y
+                        departamentos internos. <em>(IBM, 2023)</em>
+                    </p>
+                    <p class="body-text">
+                        En el contexto web, una <strong class="hl">Web API</strong> expone esas funcionalidades a través
+                        del protocolo <strong class="hl">HTTP/HTTPS</strong>, de modo que cualquier cliente —navegador,
+                        app móvil, dispositivo IoT o incluso otro servidor— puede consumir datos y servicios de forma
+                        estandarizada sin importar el lenguaje de programación que use.
+                    </p>
+                    <p class="body-text">
+                        Las APIs son el pegamento invisible de internet moderno. Cuando usas Google Maps dentro de otra
+                        app, cuando pagas con PayPal en un sitio externo, o cuando ves un video de YouTube embebido en
+                        una página, estás consumiendo una Web API.
+                    </p>
                     <div class="row g-2 mt-3">
                         <div class="col-6">
                             <div class="d-flex align-items-center gap-2"><i
                                     class="bi bi-check-circle-fill text-success"></i><span
-                                    style="color:#ccc;font-size:.9rem;">Independiente del lenguaje</span></div>
+                                    class="check-text">Independiente del lenguaje</span></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span class="check-text">Basada en
+                                    HTTP/HTTPS</span></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span class="check-text">JSON / XML
+                                    como formato</span></div>
                         </div>
                         <div class="col-6">
                             <div class="d-flex align-items-center gap-2"><i
                                     class="bi bi-check-circle-fill text-success"></i><span
-                                    style="color:#ccc;font-size:.9rem;">Basada en HTTP/HTTPS</span></div>
+                                    class="check-text">Reutilizable y escalable</span></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2"><i
+                                    class="bi bi-check-circle-fill text-success"></i><span class="check-text">Segura con
+                                    tokens / OAuth</span></div>
                         </div>
                         <div class="col-6">
                             <div class="d-flex align-items-center gap-2"><i
                                     class="bi bi-check-circle-fill text-success"></i><span
-                                    style="color:#ccc;font-size:.9rem;">JSON / XML como datos</span></div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex align-items-center gap-2"><i
-                                    class="bi bi-check-circle-fill text-success"></i><span
-                                    style="color:#ccc;font-size:.9rem;">Reutilizable y escalable</span></div>
+                                    class="check-text">Versionable y documentable</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="code-block">
-                        <span class="cm">// Ejemplo: consumir una Web API con fetch (JS)</span>
-                        <span class="kw">const</span> response = <span class="kw">await</span> fetch(
-                        <span class="str">'https://api.ejemplo.com/v1/usuarios'</span>,
-                        {
-                        method: <span class="str">'GET'</span>,
-                        headers: {
-                        <span class="str">'Authorization'</span>: <span class="str">'Bearer &lt;token&gt;'</span>,
-                        <span class="str">'Content-Type'</span>: <span class="str">'application/json'</span>
-                        }
-                        }
-                        );
-
-                        <span class="kw">const</span> data = <span class="kw">await</span> response.json();
-                        console.log(data); <span class="cm">// ← Datos del servidor</span>
-                    </div>
+                    <figure class="img-figure">
+                        <img src="https://restfulapi.net/wp-content/uploads/What-is-REST-API.jpg"
+                            alt="Arquitectura REST API — cliente servidor" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/600x380/1a1a2e/6c63ff?text=REST+API+Architecture'" />
+                        <figcaption>Figura 1. Flujo de comunicación en una arquitectura REST API.</figcaption>
+                    </figure>
                 </div>
             </div>
 
             <!-- Tipos de APIs -->
-            <h4 class="mb-3" style="font-weight:700;color:#fff;">Tipos de Web APIs</h4>
+            <h4 class="sub-title mb-1">Tipos de Web APIs</h4>
+            <p class="body-text mb-4">Existen varios estilos arquitectónicos para diseñar Web APIs. La elección depende
+                del caso de uso, los requisitos de rendimiento y la experiencia del equipo de desarrollo.</p>
             <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-3">
                     <div class="feat-card">
                         <div class="feat-icon ic-purple"><i class="bi bi-arrow-left-right"></i></div>
                         <h5>REST</h5>
-                        <p>El estilo más popular. Usa métodos HTTP (GET, POST, PUT, DELETE) y recursos identificados por
-                            URLs. Stateless y sin estado entre peticiones.</p>
+                        <p>El estilo más popular. Usa métodos HTTP estándar (GET, POST, PUT, DELETE) y recursos
+                            identificados por URLs únicas. Es <strong class="hl-sm">stateless</strong>: cada petición
+                            contiene toda la información necesaria. Ideal para APIs públicas y servicios web de
+                            propósito general.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="feat-card pink">
                         <div class="feat-icon ic-pink"><i class="bi bi-grid-3x3-gap"></i></div>
                         <h5>GraphQL</h5>
-                        <p>Permite al cliente pedir exactamente los datos que necesita. Desarrollado por Meta. Reduce el
-                            over-fetching y under-fetching de datos.</p>
+                        <p>Desarrollado por Meta en 2015. Permite al cliente especificar exactamente qué datos necesita
+                            en una sola petición, evitando el <em>over-fetching</em> y <em>under-fetching</em>. Un único
+                            endpoint <code>/graphql</code> maneja todas las consultas y mutaciones.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="feat-card cyan">
                         <div class="feat-icon ic-blue"><i class="bi bi-broadcast-pin"></i></div>
                         <h5>WebSockets</h5>
-                        <p>Comunicación bidireccional en tiempo real entre cliente y servidor. Ideal para chats,
-                            notificaciones push y dashboards en vivo.</p>
+                        <p>Protocolo de comunicación <strong class="hl-sm">bidireccional y persistente</strong> entre
+                            cliente y servidor. Ideal para aplicaciones en tiempo real: chats, notificaciones push,
+                            dashboards en vivo, juegos multijugador y cotizaciones financieras.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="feat-card green">
                         <div class="feat-icon ic-green"><i class="bi bi-braces-asterisk"></i></div>
                         <h5>SOAP</h5>
-                        <p>Protocolo basado en XML. Más rígido y verboso que REST, pero con mayor soporte para
-                            transacciones y seguridad empresarial.</p>
+                        <p>Protocolo basado en mensajes <strong class="hl-sm">XML</strong>. Más rígido que REST pero con
+                            mayor soporte para transacciones distribuidas (ACID), seguridad empresarial (WS-Security) y
+                            contratos formales mediante WSDL. Aún prevalece en banca y sistemas legacy.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Ejemplos reales -->
-            <h4 class="mb-3" style="font-weight:700;color:#fff;">APIs populares en la industria</h4>
-            <div class="row g-3">
+            <!-- Cómo funciona REST: imagen + tabla verbos HTTP -->
+            <div class="row g-5 align-items-start mb-5">
+                <div class="col-lg-7">
+                    <h4 class="sub-title">¿Cómo funciona una API REST?</h4>
+                    <p class="body-text">REST (Representational State Transfer) fue definido por Roy Fielding en su
+                        disertación doctoral del año 2000. Se basa en seis principios arquitectónicos: interfaz
+                        uniforme, sin estado, caché, sistema en capas, código bajo demanda (opcional) y arquitectura
+                        cliente-servidor.</p>
+                    <p class="body-text">Cada recurso se identifica con una <strong class="hl">URL única</strong> y se
+                        manipula usando los verbos estándar de HTTP:</p>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-bordered align-middle mt-2">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Verbo HTTP</th>
+                                    <th>Acción</th>
+                                    <th>Ejemplo de endpoint</th>
+                                    <th>Código de éxito</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" style="font-size:.88rem;">
+                                <tr>
+                                    <td><code style="color:#43e97b;">GET</code></td>
+                                    <td>Leer / Listar</td>
+                                    <td><code>/api/v1/usuarios</code></td>
+                                    <td>200 OK</td>
+                                </tr>
+                                <tr>
+                                    <td><code style="color:#38bdf8;">POST</code></td>
+                                    <td>Crear</td>
+                                    <td><code>/api/v1/usuarios</code></td>
+                                    <td>201 Created</td>
+                                </tr>
+                                <tr>
+                                    <td><code style="color:#fb923c;">PUT</code></td>
+                                    <td>Actualizar completo</td>
+                                    <td><code>/api/v1/usuarios/42</code></td>
+                                    <td>200 OK</td>
+                                </tr>
+                                <tr>
+                                    <td><code style="color:#a78bfa;">PATCH</code></td>
+                                    <td>Actualizar parcial</td>
+                                    <td><code>/api/v1/usuarios/42</code></td>
+                                    <td>200 OK</td>
+                                </tr>
+                                <tr>
+                                    <td><code style="color:#ff6584;">DELETE</code></td>
+                                    <td>Eliminar</td>
+                                    <td><code>/api/v1/usuarios/42</code></td>
+                                    <td>204 No Content</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <figure class="img-figure">
+                        <img src="https://www.seobility.net/en/wiki/images/f/f1/Rest-API.png"
+                            alt="Flujo de petición y respuesta REST API" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/480x340/1a1a2e/6c63ff?text=REST+Request+Response'" />
+                        <figcaption>Figura 2. Ciclo petición-respuesta en una API REST.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- APIs populares -->
+            <h4 class="sub-title mb-1">APIs populares en la industria</h4>
+            <p class="body-text mb-4">Estas son algunas de las Web APIs más utilizadas globalmente, que sirven como
+                referencia de buenas prácticas de diseño y documentación.</p>
+            <div class="row g-3 mb-3">
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="feat-card text-center p-3">
                         <i class="bi bi-google fs-2" style="color:#4285F4;"></i>
-                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">Google Maps, Gmail, Traductor</p>
+                        <p class="mt-2 mb-1 fw-bold" style="color:#fff;font-size:.85rem;">Google</p>
+                        <p class="mb-0" style="font-size:.75rem;color:#666;">Maps, Gmail, Translate, Vision AI</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="feat-card text-center p-3">
-                        <i class="bi bi-paypal fs-2" style="color:#003087;"></i>
-                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">PayPal Payments API</p>
+                        <i class="bi bi-paypal fs-2" style="color:#0070ba;"></i>
+                        <p class="mt-2 mb-1 fw-bold" style="color:#fff;font-size:.85rem;">PayPal</p>
+                        <p class="mb-0" style="font-size:.75rem;color:#666;">Pagos, suscripciones, transferencias</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="feat-card text-center p-3">
                         <i class="bi bi-youtube fs-2" style="color:#FF0000;"></i>
-                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">YouTube Embed API</p>
+                        <p class="mt-2 mb-1 fw-bold" style="color:#fff;font-size:.85rem;">YouTube</p>
+                        <p class="mb-0" style="font-size:.75rem;color:#666;">Embed, Data API v3, Analytics</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="feat-card text-center p-3">
                         <i class="bi bi-whatsapp fs-2" style="color:#25D366;"></i>
-                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">WhatsApp Business API</p>
+                        <p class="mt-2 mb-1 fw-bold" style="color:#fff;font-size:.85rem;">WhatsApp</p>
+                        <p class="mb-0" style="font-size:.75rem;color:#666;">Business API — mensajería masiva</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="feat-card text-center p-3">
                         <i class="bi bi-instagram fs-2" style="color:#E1306C;"></i>
-                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">Instagram Graph API</p>
+                        <p class="mt-2 mb-1 fw-bold" style="color:#fff;font-size:.85rem;">Instagram</p>
+                        <p class="mb-0" style="font-size:.75rem;color:#666;">Graph API — publicaciones y métricas</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="feat-card text-center p-3">
-                        <i class="bi bi-facebook fs-2" style="color:#1877F2;"></i>
-                        <p class="mt-2 mb-0" style="font-size:.82rem;color:#ccc;">Facebook Marketing API</p>
+                        <i class="bi bi-twitter-x fs-2" style="color:#fff;"></i>
+                        <p class="mt-2 mb-1 fw-bold" style="color:#fff;font-size:.85rem;">X / Twitter</p>
+                        <p class="mb-0" style="font-size:.75rem;color:#666;">Tweets, búsquedas, streaming</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Video Web APIs -->
+            <div class="row g-4 align-items-center mt-3">
+                <div class="col-lg-7">
+                    <div class="video-wrap">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/s7wmiS2mSXY" title="¿Qué es una API?"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h5 class="sub-title-sm">¿Por qué las APIs son el futuro?</h5>
+                    <p class="body-text">Las APIs transformaron la industria al permitir que empresas como Stripe,
+                        Twilio o SendGrid construyeran negocios enteros vendiendo acceso a sus APIs. Este modelo
+                        —conocido como <strong class="hl">API-first</strong> o <strong class="hl">API economy</strong>—
+                        es ahora estándar: las empresas diseñan sus productos como plataformas desde el inicio,
+                        exponiendo funcionalidades que terceros pueden integrar para crear valor adicional.</p>
+                    <p class="body-text">La estandarización mediante OpenAPI (Swagger), la seguridad con OAuth 2.0 y
+                        JWT, y las herramientas de gestión como Kong o AWS API Gateway han consolidado a las Web APIs
+                        como la columna vertebral del software moderno.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      TEMA 2 — MICROSERVICIOS
-══════════════════════════════════════════════════ -->
+══════════════════════════════════════════════ -->
     <span class="section-anchor" id="microservicios"></span>
     <section class="alt">
         <div class="container">
+
             <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="feat-icon ic-pink"
-                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
-                        class="bi bi-boxes"></i></div>
+                <div class="feat-icon ic-pink topic-icon"><i class="bi bi-boxes"></i></div>
                 <div>
                     <div class="section-tag" style="color:var(--secondary)">Tema 2</div>
-                    <h2 class="section-title mb-0"><span
-                            style="background:linear-gradient(90deg,var(--secondary),#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Microservicios</span>
-                    </h2>
+                    <h2 class="section-title mb-0"><span class="gradient-text-pink">Microservicios</span></h2>
                 </div>
             </div>
             <div class="divider div-pink"></div>
 
             <!-- Stats bar -->
-            <div class="stats-bar mb-5" style="background:linear-gradient(135deg,#2a0a1e,#3d1a2e);">
+            <div class="stats-bar stats-pink mb-5">
                 <div class="row text-center g-3">
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:#ff6584;">87%</div>
@@ -309,283 +418,404 @@
                 </div>
             </div>
 
-            <div class="row g-5 mb-5">
+            <!-- Definición + imagen -->
+            <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">¿Qué son los Microservicios?</h4>
-                    <p style="color:#9090b0;">Los microservicios son un enfoque arquitectónico <strong
-                            style="color:#fff">nativo de la nube</strong> en el que una sola aplicación se conforma de
-                        muchos componentes pequeños, poco acoplados y desplegables de forma independiente. Cada servicio
-                        tiene su propia tecnología, base de datos y modelo de datos, comunicándose mediante <strong
-                            style="color:#fff">APIs REST</strong>, eventos o agentes de mensajes.</p>
-                    <p style="color:#9090b0;">A diferencia del monolito, donde todo vive en un único bloque, los
-                        microservicios permiten que equipos pequeños operen de forma autónoma sobre dominios acotados
-                        del negocio.</p>
-                    <div class="timeline mt-4">
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--secondary);background:var(--secondary)"></div>
-                            <h6>Despliegue Independiente</h6>
-                            <p>Cada servicio se actualiza sin afectar al resto del sistema.</p>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--cyan);background:var(--cyan)"></div>
-                            <h6>Tecnología Polyglot</h6>
-                            <p>Cada equipo elige el lenguaje y base de datos más adecuados.</p>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--accent);background:var(--accent)"></div>
-                            <h6>Escalado Granular</h6>
-                            <p>Solo escala el servicio con mayor demanda, no toda la app.</p>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--orange);background:var(--orange)"></div>
-                            <h6>Tolerancia a Fallos</h6>
-                            <p>Un fallo aislado no tumba el sistema completo.</p>
-                        </div>
-                    </div>
+                    <h4 class="sub-title">¿Qué son los Microservicios?</h4>
+                    <p class="body-text">Los microservicios —o arquitectura de microservicios— son un enfoque
+                        arquitectónico <strong class="hl">nativo de la nube</strong> en el que una sola aplicación se
+                        construye como un conjunto de muchos componentes pequeños, <strong class="hl">poco
+                            acoplados</strong> y desplegables de forma independiente. Cada servicio se organiza
+                        alrededor de una capacidad de negocio concreta y se comunica con los demás mediante <strong
+                            class="hl">APIs REST</strong>, transmisión de eventos o agentes de mensajes como Kafka o
+                        RabbitMQ. <em>(IBM, 2023)</em></p>
+                    <p class="body-text">Este enfoque permite que equipos pequeños y autónomos —siguiendo la "regla de
+                        las dos pizzas" de Amazon— operen sobre dominios acotados del negocio sin depender del ciclo de
+                        despliegue global de la organización.</p>
+                    <p class="body-text">Los microservicios no solo son una decisión técnica: son un <strong
+                            class="hl">modelo organizativo</strong>. La arquitectura refleja la estructura del equipo
+                        (Ley de Conway) y facilita metodologías ágiles, CI/CD y una cultura DevOps genuina.</p>
                 </div>
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">Microservicios vs Monolito</h4>
+                    <figure class="img-figure">
+                        <img src="https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2021/06/02/Fig1-microservices-arch.png"
+                            alt="Arquitectura de microservicios con API Gateway" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/600x380/1a1a2e/ff6584?text=Microservicios+Architecture'" />
+                        <figcaption>Figura 3. Arquitectura típica de microservicios con API Gateway y servicios
+                            independientes.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Monolito vs Microservicios: imagen + tabla -->
+            <div class="row g-5 align-items-start mb-5">
+                <div class="col-lg-6">
+                    <figure class="img-figure">
+                        <img src="https://www.capitalone.com/tech/static/images/post-images/microservices-diagram.png"
+                            alt="Monolítico vs Microservicios comparación visual" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/580x360/1a1a2e/ff6584?text=Monolith+vs+Microservices'" />
+                        <figcaption>Figura 4. Comparación visual: arquitectura monolítica vs. microservicios.
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="sub-title">Microservicios vs. otras arquitecturas</h4>
+                    <p class="body-text">La diferencia más importante con una arquitectura <strong
+                            class="hl">monolítica</strong> es que en el monolito toda la lógica de negocio, la capa de
+                        datos y la interfaz viven juntos en una única unidad desplegable. Cualquier cambio, por pequeño
+                        que sea, requiere compilar y desplegar toda la aplicación.</p>
                     <div class="table-responsive mt-3">
                         <table class="table table-dark table-bordered align-middle">
                             <thead>
                                 <tr class="text-center">
                                     <th>Criterio</th>
                                     <th><i class="bi bi-box text-danger me-1"></i>Monolítico</th>
-                                    <th><i class="bi bi-boxes" style="color:var(--secondary)"></i> Microserv.</th>
+                                    <th><i class="bi bi-diagram-3 text-warning me-1"></i>SOA</th>
+                                    <th><i class="bi bi-boxes me-1" style="color:var(--secondary)"></i>Microservicios
+                                    </th>
                                 </tr>
                             </thead>
-                            <tbody class="text-center">
+                            <tbody class="text-center" style="font-size:.85rem;">
                                 <tr>
                                     <td class="text-start fw-bold" style="color:#fff;">Despliegue</td>
                                     <td>Único bloque</td>
-                                    <td style="color:var(--accent);">Independiente</td>
+                                    <td>Por servicio (pesado)</td>
+                                    <td style="color:var(--accent);">Independiente y ágil</td>
                                 </tr>
                                 <tr>
                                     <td class="text-start fw-bold" style="color:#fff;">Escalado</td>
                                     <td>Toda la app</td>
-                                    <td style="color:var(--accent);">Por servicio</td>
+                                    <td>Servicio completo</td>
+                                    <td style="color:var(--accent);">Componente específico</td>
                                 </tr>
                                 <tr>
                                     <td class="text-start fw-bold" style="color:#fff;">Tecnología</td>
                                     <td>Una sola pila</td>
+                                    <td>Estandarizada</td>
                                     <td style="color:var(--accent);">Polyglot libre</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-start fw-bold" style="color:#fff;">Comunicación</td>
+                                    <td>Llamadas internas</td>
+                                    <td>ESB (bus)</td>
+                                    <td style="color:var(--accent);">REST / Events / MQ</td>
                                 </tr>
                                 <tr>
                                     <td class="text-start fw-bold" style="color:#fff;">Resiliencia</td>
                                     <td>Baja</td>
+                                    <td>Media</td>
                                     <td style="color:var(--accent);">Alta</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start fw-bold" style="color:#fff;">Equipo</td>
-                                    <td>Grande único</td>
-                                    <td style="color:var(--accent);">Pequeño x svc.</td>
+                                    <td class="text-start fw-bold" style="color:#fff;">Complejidad op.</td>
+                                    <td>Baja</td>
+                                    <td>Media-Alta</td>
+                                    <td style="color:#fb923c;">Alta</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <h5 class="mt-4" style="font-weight:700;color:#fff;">Casos de éxito</h5>
-                    <div class="row g-3 mt-1">
-                        <div class="col-4">
-                            <div class="feat-card p-2 text-center"><i class="bi bi-play-circle fs-3"
-                                    style="color:var(--secondary)"></i>
-                                <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
-                                    Netflix<br /><span style="color:#666;font-weight:400;">700+ servicios</span></p>
+                </div>
+            </div>
+
+            <!-- Características y patrones -->
+            <h4 class="sub-title mb-1">Características y patrones clave</h4>
+            <p class="body-text mb-4">Un sistema bien diseñado de microservicios incorpora varios patrones
+                arquitectónicos que garantizan su correcto funcionamiento a escala.</p>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-plugin"></i></div>
+                        <h5>Desacoplamiento</h5>
+                        <p>Cada servicio tiene su propio ciclo de vida, base de datos y modelo de datos. Los cambios en
+                            uno no fuerzan cambios en los demás. El límite entre servicios se denomina <em>Bounded
+                                Context</em> (DDD).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-diagram-2"></i></div>
+                        <h5>API Gateway</h5>
+                        <p>Punto de entrada único que enruta solicitudes, gestiona autenticación (JWT / OAuth), aplica
+                            rate limiting, transforma formatos y agrega respuestas de múltiples servicios en una sola.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-activity"></i></div>
+                        <h5>Circuit Breaker</h5>
+                        <p>Cuando un servicio falla repetidamente, el circuit breaker "abre" y deja de enviarle tráfico
+                            temporalmente, devolviendo respuestas de respaldo y evitando cascadas de fallos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-broadcast"></i></div>
+                        <h5>Event-Driven</h5>
+                        <p>Los servicios publican eventos en un bus (Kafka, RabbitMQ) y otros los consumen
+                            asincrónicamente. Reduce el acoplamiento directo y mejora la resiliencia del sistema ante
+                            picos de carga.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-search"></i></div>
+                        <h5>Service Discovery</h5>
+                        <p>Los servicios se registran dinámicamente (Consul, Eureka, Kubernetes DNS) y se localizan sin
+                            necesidad de IPs hardcodeadas, facilitando el escalado horizontal automático.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card pink">
+                        <div class="feat-icon ic-pink"><i class="bi bi-eye"></i></div>
+                        <h5>Observabilidad</h5>
+                        <p>Los tres pilares: <strong class="hl-sm">Métricas</strong> (Prometheus), <strong
+                                class="hl-sm">Logs</strong> (ELK Stack) y <strong class="hl-sm">Trazas
+                                distribuidas</strong> (Jaeger, Zipkin). Imprescindibles para depurar sistemas
+                            distribuidos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Casos de éxito + video -->
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <h4 class="sub-title">Casos de éxito en la industria</h4>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="feat-card p-3 d-flex align-items-start gap-3">
+                                <i class="bi bi-play-circle fs-2 flex-shrink-0" style="color:var(--secondary)"></i>
+                                <div><strong style="color:#fff;">Netflix</strong>
+                                    <p class="mb-0 mt-1" style="color:#9090b0;font-size:.88rem;">Migró de un monolito a
+                                        más de 700 microservicios. Cada servicio (catálogo, reproducción,
+                                        recomendaciones, facturación) escala de forma independiente para atender a 270M+
+                                        de usuarios.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="feat-card p-2 text-center"><i class="bi bi-cart fs-3"
-                                    style="color:var(--orange)"></i>
-                                <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
-                                    Amazon<br /><span style="color:#666;font-weight:400;">Pionero</span></p>
+                        <div class="col-12">
+                            <div class="feat-card p-3 d-flex align-items-start gap-3">
+                                <i class="bi bi-cart fs-2 flex-shrink-0" style="color:var(--orange)"></i>
+                                <div><strong style="color:#fff;">Amazon</strong>
+                                    <p class="mb-0 mt-1" style="color:#9090b0;font-size:.88rem;">Pionero de la
+                                        arquitectura. Obligó a todos sus equipos a exponer sus funcionalidades como APIs
+                                        internas (la famosa memo de Bezos del 2002), lo que luego se convirtió en AWS.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="feat-card p-2 text-center"><i class="bi bi-car-front fs-3"
-                                    style="color:var(--cyan)"></i>
-                                <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
-                                    Uber<br /><span style="color:#666;font-weight:400;">Pagos & mapas</span></p>
+                        <div class="col-12">
+                            <div class="feat-card p-3 d-flex align-items-start gap-3">
+                                <i class="bi bi-car-front fs-2 flex-shrink-0" style="color:var(--cyan)"></i>
+                                <div><strong style="color:#fff;">Uber</strong>
+                                    <p class="mb-0 mt-1" style="color:#9090b0;font-size:.88rem;">Separó sus servicios de
+                                        viajes, pagos, mapas, notificaciones y precios en microservicios independientes,
+                                        permitiendo escalar cada área según la demanda geográfica en tiempo real.</p>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="video-wrap">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/rv4LlmLmVWk" title="Microservicios explicados"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Video microservicios -->
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-7">
-                    <div class="video-wrap">
-                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/rv4LlmLmVWk"
-                                title="Microservicios explicados" allowfullscreen></iframe></div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <h5 style="font-weight:700;color:#fff;">¿Por qué importan los microservicios?</h5>
-                    <p style="color:#9090b0;font-size:.92rem;">Los microservicios reflejan la forma en que las
-                        organizaciones modernas quieren estructurar sus equipos: pequeños, autónomos y orientados a un
-                        producto. Esta arquitectura facilita la adopción de metodologías ágiles y la entrega continua
-                        (CI/CD), acelerando el time-to-market.</p>
-                    <a href="https://www.youtube.com/watch?v=j3XufmvEMiM" target="_blank"
-                        class="btn btn-outline-primary btn-sm mt-2"><i class="bi bi-play-circle me-1"></i>Ver más
-                        material</a>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      TEMA 3 — DESARROLLO DE UNA WEB API
-══════════════════════════════════════════════════ -->
+══════════════════════════════════════════════ -->
     <span class="section-anchor" id="desarrollo"></span>
     <section>
         <div class="container">
+
             <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="feat-icon ic-blue"
-                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
-                        class="bi bi-code-slash"></i></div>
+                <div class="feat-icon ic-blue topic-icon"><i class="bi bi-code-slash"></i></div>
                 <div>
                     <div class="section-tag" style="color:var(--cyan)">Tema 3</div>
-                    <h2 class="section-title mb-0"><span
-                            style="background:linear-gradient(90deg,var(--cyan),#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Desarrollo
-                            de una Web API</span></h2>
+                    <h2 class="section-title mb-0"><span class="gradient-text-cyan">Desarrollo de una Web API</span>
+                    </h2>
                 </div>
             </div>
             <div class="divider div-cyan"></div>
 
-            <div class="row g-5">
-                <!-- Recomendaciones -->
+            <!-- Recomendaciones + imagen Swagger -->
+            <div class="row g-5 align-items-start mb-5">
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;margin-bottom:1.2rem;">Recomendaciones clave</h4>
+                    <h4 class="sub-title">Recomendaciones clave antes de desarrollar</h4>
+                    <p class="body-text">El éxito de una API no depende únicamente de su código, sino del proceso previo
+                        al desarrollo. Estas recomendaciones, basadas en el material del curso, son fundamentales para
+                        construir APIs robustas, usables y mantenibles.</p>
+
                     <div class="step-item">
                         <div class="step-circle" style="background:rgba(108,99,255,.2);color:var(--primary);">1</div>
                         <div class="step-text">
                             <h6>Definir los objetivos de la API</h6>
-                            <p>Antes de escribir una sola línea de código, comprende qué problemas resolverá y quiénes
-                                serán sus consumidores.</p>
+                            <p>Antes de escribir una sola línea de código, comprende qué problema resolverá, quiénes
+                                serán sus consumidores (web, móvil, terceros) y qué datos o funcionalidades expondrá.
+                                Esta claridad evita rediseños costosos.</p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle" style="background:rgba(56,189,248,.2);color:var(--cyan);">2</div>
                         <div class="step-text">
                             <h6>Seguir estándares y convenciones</h6>
-                            <p>Aplica los principios REST, usa JSON o XML como formato de intercambio, y nombra
-                                endpoints de forma coherente y predecible.</p>
+                            <p>Aplica los principios REST: URLs en sustantivos plurales (<code>/usuarios</code>), verbos
+                                HTTP correctos, códigos de estado HTTP semánticos (200, 201, 400, 401, 404, 500) y JSON
+                                como formato de intercambio.</p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle" style="background:rgba(67,233,123,.2);color:var(--accent);">3</div>
                         <div class="step-text">
                             <h6>Documentar exhaustivamente</h6>
-                            <p>Usa herramientas como <strong style="color:#fff">Swagger</strong> o <strong
-                                    style="color:#fff">Postman</strong> para generar documentación automática que otros
-                                desarrolladores puedan entender y usar.</p>
+                            <p>Usa <strong class="hl">Swagger / OpenAPI</strong> para generar documentación interactiva
+                                automáticamente. Una API bien documentada es una API que los desarrolladores adoptan.
+                                <strong class="hl">Postman</strong> complementa para pruebas y ejemplos de uso.
+                            </p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle" style="background:rgba(255,101,132,.2);color:var(--secondary);">4</div>
                         <div class="step-text">
                             <h6>Priorizar la seguridad</h6>
-                            <p>Implementa autenticación (JWT, OAuth 2.0) y autorización, valida todas las entradas y usa
-                                HTTPS en todo momento.</p>
+                            <p>Implementa autenticación (<strong class="hl">JWT</strong>, <strong class="hl">OAuth
+                                    2.0</strong>) y autorización por roles. Valida y sanitiza todos los inputs, usa
+                                HTTPS en producción, aplica rate limiting y registra todos los accesos (audit logs).</p>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-circle" style="background:rgba(251,146,60,.2);color:var(--orange);">5</div>
                         <div class="step-text">
                             <h6>Versionar la API</h6>
-                            <p>Versiona tu API (<code style="color:var(--cyan)">/v1/</code>, <code
-                                    style="color:var(--cyan)">/v2/</code>) para mantener compatibilidad hacia atrás sin
-                                romper integraciones existentes.</p>
+                            <p>Versiona desde el inicio (<code>/api/v1/</code>) para poder introducir cambios sin romper
+                                integraciones existentes. Mantén al menos la versión anterior activa durante un período
+                                de transición (deprecation policy).</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Proceso de desarrollo -->
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;margin-bottom:1.2rem;">Proceso de desarrollo</h4>
-                    <div class="accordion" id="devAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#dev1">1. Análisis de
-                                    requerimientos</button></h2>
-                            <div id="dev1" class="accordion-collapse collapse show" data-bs-parent="#devAccordion">
-                                <div class="accordion-body">Identifica requisitos funcionales y no funcionales, casos de
-                                    uso, actores del sistema y los datos que se manipularán.</div>
+                    <figure class="img-figure">
+                        <img src="https://static1.smartbear.co/swagger/media/images/tools/opensource/swagger_ui.png"
+                            alt="Interfaz de Swagger UI para documentación de APIs" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/580x380/1a1a2e/38bdf8?text=Swagger+UI+Docs'" />
+                        <figcaption>Figura 5. Swagger UI genera documentación interactiva a partir del código de la API.
+                        </figcaption>
+                    </figure>
+                    <div class="row g-3 mt-3">
+                        <div class="col-6">
+                            <div class="feat-card cyan p-3 text-center">
+                                <i class="bi bi-file-code fs-2" style="color:var(--cyan);"></i>
+                                <p class="mt-2 mb-0 fw-bold" style="color:#fff;font-size:.85rem;">Swagger / OpenAPI</p>
+                                <p style="font-size:.75rem;color:#666;margin:0;">Documentación automática interactiva
+                                </p>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#dev2">2. Planificación</button></h2>
-                            <div id="dev2" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
-                                <div class="accordion-body">Define objetivos, asigna recursos, estima tiempos y costos,
-                                    elige la metodología (Scrum, Kanban) y los frameworks del proyecto.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#dev3">3. Diseño de la API</button></h2>
-                            <div id="dev3" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
-                                <div class="accordion-body">Define los endpoints, los métodos HTTP admitidos (GET, POST,
-                                    PUT, DELETE), los parámetros de solicitud/respuesta y el esquema de autenticación.
-                                    Ejemplo: <code>/posts</code>, <code>/posts/{id}</code>, <code>/comments</code>.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#dev4">4. Implementación</button></h2>
-                            <div id="dev4" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
-                                <div class="accordion-body">Desarrolla la API usando frameworks como
-                                    <strong>Express.js</strong> (Node.js), <strong>Flask / FastAPI</strong> (Python) o
-                                    <strong>Spring Boot</strong> (Java), siguiendo el diseño definido.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#dev5">5. Pruebas</button></h2>
-                            <div id="dev5" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
-                                <div class="accordion-body">Realiza pruebas unitarias, de integración y de carga.
-                                    Herramientas: <strong>Postman</strong>, <strong>Jest</strong>,
-                                    <strong>PyTest</strong>, <strong>JMeter</strong>.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#dev6">6. Documentación y
-                                    Despliegue</button></h2>
-                            <div id="dev6" class="accordion-collapse collapse" data-bs-parent="#devAccordion">
-                                <div class="accordion-body">Crea documentación clara con Swagger/OpenAPI, despliega en
-                                    producción (AWS, GCP, Azure) y establece un sistema de monitoreo (Prometheus,
-                                    Grafana) para detectar problemas.</div>
+                        <div class="col-6">
+                            <div class="feat-card cyan p-3 text-center">
+                                <i class="bi bi-send-check fs-2" style="color:var(--orange);"></i>
+                                <p class="mt-2 mb-0 fw-bold" style="color:#fff;font-size:.85rem;">Postman</p>
+                                <p style="font-size:.75rem;color:#666;margin:0;">Pruebas, colecciones y mock servers</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Endpoints example -->
-            <div class="row mt-5 g-4">
-                <div class="col-12">
-                    <h4 style="font-weight:700;color:#fff;">Diseño de Endpoints — Ejemplo: API de Blog</h4>
+            <!-- Proceso de desarrollo -->
+            <h4 class="sub-title mb-1">Proceso de desarrollo paso a paso</h4>
+            <p class="body-text mb-4">El desarrollo de una Web API sigue un ciclo estructurado que garantiza la calidad,
+                la seguridad y la mantenibilidad del producto final.</p>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="step-circle mb-3" style="background:rgba(56,189,248,.2);color:var(--cyan);">1</div>
+                        <h5>Análisis de requerimientos</h5>
+                        <p>Identifica requisitos funcionales (qué hará la API) y no funcionales (rendimiento, seguridad,
+                            disponibilidad). Define los casos de uso, actores del sistema y los datos que se
+                            manipularán.</p>
+                    </div>
                 </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="step-circle mb-3" style="background:rgba(56,189,248,.2);color:var(--cyan);">2</div>
+                        <h5>Planificación</h5>
+                        <p>Define objetivos medibles, asigna recursos, estima tiempos y costos, elige la metodología
+                            (Scrum, Kanban) y los frameworks del proyecto (Express.js, FastAPI, Spring Boot).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="step-circle mb-3" style="background:rgba(56,189,248,.2);color:var(--cyan);">3</div>
+                        <h5>Diseño de la API</h5>
+                        <p>Define los endpoints, métodos HTTP admitidos, parámetros de solicitud y respuesta, esquema de
+                            autenticación y el modelo de datos. Documenta antes de implementar (<em>API-first
+                                design</em>).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="step-circle mb-3" style="background:rgba(56,189,248,.2);color:var(--cyan);">4</div>
+                        <h5>Implementación</h5>
+                        <p>Desarrolla la lógica de negocio siguiendo el diseño. Usa frameworks maduros: <strong
+                                class="hl">Express.js</strong> (Node), <strong class="hl">FastAPI / Flask</strong>
+                            (Python), <strong class="hl">Spring Boot</strong> (Java), <strong
+                                class="hl">Laravel</strong> (PHP).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="step-circle mb-3" style="background:rgba(56,189,248,.2);color:var(--cyan);">5</div>
+                        <h5>Pruebas</h5>
+                        <p>Pruebas unitarias (Jest, PyTest), de integración, de carga (JMeter, k6) y de seguridad (OWASP
+                            ZAP). Automatiza las pruebas en el pipeline CI/CD para detectar regresiones tempranamente.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card cyan">
+                        <div class="step-circle mb-3" style="background:rgba(56,189,248,.2);color:var(--cyan);">6–9
+                        </div>
+                        <h5>Despliegue, Monitoreo y Publicación</h5>
+                        <p>Despliega en producción (AWS, GCP, Azure), establece monitoreo (Prometheus, Grafana), realiza
+                            mantenimiento continuo y opcionalmente publica la API en un marketplace (RapidAPI, API
+                            Gateway).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endpoints + código -->
+            <h4 class="sub-title mb-1">Diseño de Endpoints — Ejemplo práctico</h4>
+            <p class="body-text mb-4">Un endpoint es una URL específica a la que los clientes envían solicitudes HTTP
+                para interactuar con la API. Cada endpoint está asociado con una operación concreta que la API puede
+                realizar. <em>(Mondragón, 2026)</em></p>
+            <div class="row g-4">
                 <div class="col-md-6">
                     <div class="code-block">
-                        <span class="cm">// Endpoints típicos de una API REST</span>
+                        <span class="cm">// Endpoints de una API REST de Blog</span>
 
-                        <span class="kw">GET</span> <span class="url">/api/v1/posts</span> <span class="cm">← Lista de
+                        <span class="kw">GET</span> <span class="url">/api/v1/posts</span> <span class="cm">← Lista
                             posts</span>
                         <span class="kw">POST</span> <span class="url">/api/v1/posts</span> <span class="cm">← Crear
                             post</span>
                         <span class="kw">GET</span> <span class="url">/api/v1/posts/{id}</span> <span class="cm">← Post
-                            específico</span>
+                            por ID</span>
                         <span class="kw">PUT</span> <span class="url">/api/v1/posts/{id}</span> <span class="cm">←
-                            Actualizar post</span>
+                            Actualizar</span>
                         <span class="kw">DELETE</span> <span class="url">/api/v1/posts/{id}</span> <span class="cm">←
-                            Eliminar post</span>
+                            Eliminar</span>
 
-                        <span class="kw">GET</span> <span class="url">/api/v1/comments</span> <span class="cm">← Lista
-                            comentarios</span>
+                        <span class="kw">GET</span> <span class="url">/api/v1/comments</span> <span class="cm">←
+                            Comentarios</span>
                         <span class="kw">POST</span> <span class="url">/api/v1/comments</span> <span class="cm">← Nuevo
                             comentario</span>
                         <span class="kw">DELETE</span> <span class="url">/api/v1/comments/{id}</span> <span class="cm">←
@@ -594,81 +824,90 @@
                 </div>
                 <div class="col-md-6">
                     <div class="code-block">
-                        <span class="cm">// Respuesta típica JSON de una API REST</span>
-                        {
-                        <span class="str">"status"</span>: <span class="str">"success"</span>,
-                        <span class="str">"data"</span>: {
-                        <span class="str">"id"</span>: 42,
-                        <span class="str">"title"</span>: <span class="str">"Introducción a REST"</span>,
-                        <span class="str">"author"</span>: <span class="str">"Mondragón, M."</span>,
-                        <span class="str">"createdAt"</span>: <span class="str">"2026-03-04T10:00:00Z"</span>,
-                        <span class="str">"tags"</span>: [<span class="str">"API"</span>, <span
-                            class="str">"REST"</span>, <span class="str">"Web"</span>]
-                        },
-                        <span class="str">"meta"</span>: { <span class="str">"version"</span>: <span
-                            class="str">"v1"</span> }
+                        <span class="cm">// Ejemplo Express.js — Ruta GET /posts</span>
+                        <span class="kw">const</span> express = require(<span class="str">'express'</span>);
+                        <span class="kw">const</span> app = express();
+                        app.use(express.json());
+
+                        app.get(<span class="str">'/api/v1/posts'</span>, <span class="kw">async</span> (req, res) => {
+                        <span class="kw">try</span> {
+                        <span class="kw">const</span> posts = <span class="kw">await</span> Post.findAll();
+                        res.status(200).json({
+                        status: <span class="str">'success'</span>,
+                        data: posts
+                        });
+                        } <span class="kw">catch</span> (err) {
+                        res.status(500).json({ error: err.message });
                         }
+                        });
+
+                        app.listen(3000, () =>
+                        console.log(<span class="str">'API activa en puerto 3000'</span>));
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      TEMA 4 — MANEJO DE CONTENEDORES
-══════════════════════════════════════════════════ -->
+══════════════════════════════════════════════ -->
     <span class="section-anchor" id="contenedores"></span>
     <section class="alt">
         <div class="container">
+
             <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="feat-icon ic-green"
-                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
-                        class="bi bi-box-seam"></i></div>
+                <div class="feat-icon ic-green topic-icon"><i class="bi bi-box-seam"></i></div>
                 <div>
                     <div class="section-tag" style="color:var(--accent)">Tema 4</div>
-                    <h2 class="section-title mb-0"><span
-                            style="background:linear-gradient(90deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Manejo
-                            de Contenedores</span></h2>
+                    <h2 class="section-title mb-0"><span class="gradient-text-green">Manejo de Contenedores</span></h2>
                 </div>
             </div>
             <div class="divider div-green"></div>
 
             <!-- Stats bar -->
-            <div class="stats-bar mb-5" style="background:linear-gradient(135deg,#0a1f12,#0d2a1a);">
+            <div class="stats-bar stats-green mb-5">
                 <div class="row text-center g-3">
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:var(--accent);">Ligeros</div>
-                        <div class="stat-label">Comparten el SO del host, sin hypervisor</div>
+                        <div class="stat-label">Comparten el kernel del SO anfitrión, sin hypervisor</div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:var(--accent);">Portables</div>
-                        <div class="stat-label">Funcionan igual en dev, staging y producción</div>
+                        <div class="stat-label">Mismo comportamiento en dev, staging y producción</div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="stat-number" style="color:var(--accent);">Aislados</div>
-                        <div class="stat-label">Cada contenedor tiene su propio espacio</div>
+                        <div class="stat-number" style="color:var(--accent);">Rápidos</div>
+                        <div class="stat-label">Arrancan en segundos frente a minutos de una VM</div>
                     </div>
                     <div class="col-6 col-md-3">
-                        <div class="stat-number" style="color:var(--accent);">Escalables</div>
-                        <div class="stat-label">Orquestados con Kubernetes fácilmente</div>
+                        <div class="stat-number" style="color:var(--accent);">Densos</div>
+                        <div class="stat-label">Un host puede correr decenas de contenedores simultáneos</div>
                     </div>
                 </div>
             </div>
 
-            <div class="row g-5 mb-5">
+            <!-- Definición contenedores + imagen Docker -->
+            <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">¿Qué es un Contenedor?</h4>
-                    <p style="color:#9090b0;">Los contenedores son <strong style="color:#fff">paquetes ligeros de
-                            software</strong> que incluyen todo lo necesario para ejecutar una aplicación en cualquier
-                        entorno: código, runtime, bibliotecas y configuración. Al virtualizar el sistema operativo en
-                        lugar del hardware, son mucho más eficientes que las máquinas virtuales.</p>
-                    <p style="color:#9090b0;">Google usa contenedores para todo: Gmail, YouTube, la Búsqueda. La
-                        tecnología evolucionó hasta convertirse en <strong style="color:#fff">Docker</strong>
-                        (contenedores) y <strong style="color:#fff">Kubernetes</strong> (orquestación), las herramientas
-                        estándar de la industria.</p>
-                    <h5 class="mt-4" style="font-weight:700;color:#fff;">Contenedores vs Máquinas Virtuales</h5>
-                    <div class="table-responsive mt-2">
-                        <table class="table table-dark table-bordered table-sm align-middle">
+                    <h4 class="sub-title">¿Qué es un Contenedor?</h4>
+                    <p class="body-text">Los contenedores son <strong class="hl">paquetes ligeros de software</strong>
+                        que incluyen todo lo necesario para ejecutar una aplicación en cualquier entorno: código fuente,
+                        runtime, bibliotecas, variables de entorno y archivos de configuración. Al virtualizar el
+                        sistema operativo en lugar del hardware completo, son mucho más eficientes que las máquinas
+                        virtuales tradicionales. <em>(Google Cloud, 2024)</em></p>
+                    <p class="body-text">Google ha usado contenedores durante más de una década para ejecutar Gmail,
+                        YouTube y la Búsqueda. Esta experiencia derivó en la creación de <strong
+                            class="hl">Kubernetes</strong>, que Google donó a la CNCF en 2014 y que hoy es el estándar
+                        de orquestación de contenedores de la industria.</p>
+                    <p class="body-text">La gran ventaja de los contenedores es que resuelven el clásico problema de
+                        <em>"en mi máquina funciona"</em>: al empaquetar la aplicación junto con todas sus dependencias,
+                        garantizan un comportamiento idéntico en cualquier entorno de ejecución.
+                    </p>
+                    <h5 class="sub-title-sm mt-4">Contenedores vs Máquinas Virtuales</h5>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-bordered table-sm align-middle mt-2">
                             <thead>
                                 <tr class="text-center">
                                     <th>Aspecto</th>
@@ -683,126 +922,161 @@
                                     <td style="color:var(--accent);">Segundos</td>
                                 </tr>
                                 <tr>
-                                    <td class="text-start" style="color:#fff;">Tamaño</td>
-                                    <td>GB</td>
-                                    <td style="color:var(--accent);">MB</td>
+                                    <td class="text-start" style="color:#fff;">Tamaño imagen</td>
+                                    <td>Varios GB</td>
+                                    <td style="color:var(--accent);">Decenas de MB</td>
                                 </tr>
                                 <tr>
                                     <td class="text-start" style="color:#fff;">SO propio</td>
-                                    <td>Sí (completo)</td>
-                                    <td style="color:var(--accent);">No (comparte)</td>
+                                    <td>Completo (Guest OS)</td>
+                                    <td style="color:var(--accent);">Comparte kernel host</td>
                                 </tr>
                                 <tr>
                                     <td class="text-start" style="color:#fff;">Portabilidad</td>
                                     <td>Media</td>
-                                    <td style="color:var(--accent);">Alta</td>
+                                    <td style="color:var(--accent);">Muy alta</td>
                                 </tr>
                                 <tr>
                                     <td class="text-start" style="color:#fff;">Densidad</td>
-                                    <td>Baja</td>
-                                    <td style="color:var(--accent);">Alta</td>
+                                    <td>Baja (10-20/host)</td>
+                                    <td style="color:var(--accent);">Alta (100+/host)</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">Docker — El estándar de contenedores</h4>
-                    <p style="color:#9090b0;font-size:.92rem;">Docker es la plataforma más usada para crear y ejecutar
-                        contenedores. Con un simple <code style="color:var(--cyan)">Dockerfile</code> defines el entorno
-                        de tu aplicación y la empaquetas de forma reproducible.</p>
-                    <div class="code-block mt-3">
-                        <span class="cm"># Dockerfile de ejemplo — Node.js API</span>
-                        <span class="kw">FROM</span> node:20-alpine
-                        <span class="kw">WORKDIR</span> /app
-                        <span class="kw">COPY</span> package*.json ./
-                        <span class="kw">RUN</span> npm install --production
-                        <span class="kw">COPY</span> . .
-                        <span class="kw">EXPOSE</span> 3000
-                        <span class="kw">CMD</span> [<span class="str">"node"</span>, <span
-                            class="str">"index.js"</span>]
-                    </div>
-                    <div class="code-block mt-3">
-                        <span class="cm"># Comandos Docker esenciales</span>
-                        docker build -t mi-api:v1 .
-                        docker run -p 3000:3000 mi-api:v1
-                        docker ps <span class="cm"># contenedores activos</span>
-                        docker-compose up -d <span class="cm"># multi-contenedor</span>
-                    </div>
+                    <figure class="img-figure">
+                        <img src="https://www.docker.com/wp-content/uploads/2021/11/docker-containerized-appliction-blue-border_2.png"
+                            alt="Arquitectura de Docker: contenedores sobre el motor Docker"
+                            class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/580x380/1a1a2e/43e97b?text=Docker+Architecture'" />
+                        <figcaption>Figura 6. Arquitectura de Docker: contenedores comparten el kernel del sistema
+                            operativo anfitrión.</figcaption>
+                    </figure>
                 </div>
             </div>
 
-            <!-- Kubernetes -->
-            <h4 style="font-weight:700;color:#fff;" class="mb-4">Kubernetes — Orquestación de contenedores</h4>
-            <div class="row g-4 mb-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="feat-card green">
-                        <div class="feat-icon ic-green"><i class="bi bi-diagram-3"></i></div>
-                        <h5>Arquitectura de clúster</h5>
-                        <p>Un clúster Kubernetes tiene un <strong style="color:#fff">Nodo Control Plane</strong> que
-                            gestiona el estado deseado del sistema y múltiples <strong style="color:#fff">Nodos
-                                Worker</strong> que ejecutan los contenedores.</p>
+            <!-- Docker + Kubernetes -->
+            <div class="row g-5 align-items-start mb-5">
+                <div class="col-lg-6">
+                    <h4 class="sub-title">Docker — El estándar de contenedores</h4>
+                    <p class="body-text">Docker es la plataforma más utilizada para crear, distribuir y ejecutar
+                        contenedores. Con un <strong class="hl">Dockerfile</strong> defines el entorno de tu aplicación
+                        de forma reproducible. Docker Hub es el registro público de imágenes con millones de imágenes
+                        listas para usar.</p>
+                    <div class="code-block mt-3">
+                        <span class="cm"># Dockerfile — Node.js API en producción</span>
+                        <span class="kw">FROM</span> node:20-alpine
+                        <span class="kw">WORKDIR</span> /app
+                        <span class="kw">COPY</span> package*.json ./
+                        <span class="kw">RUN</span> npm ci --only=production
+                        <span class="kw">COPY</span> . .
+                        <span class="kw">ENV</span> NODE_ENV=production
+                        <span class="kw">EXPOSE</span> 3000
+                        <span class="kw">USER</span> node
+                        <span class="kw">CMD</span> [<span class="str">"node"</span>, <span
+                            class="str">"src/index.js"</span>]
+                    </div>
+                    <div class="code-block mt-3">
+                        <span class="cm"># Comandos Docker esenciales</span>
+                        docker build -t mi-api:1.0 . <span class="cm"># Construir imagen</span>
+                        docker run -p 3000:3000 mi-api:1.0 <span class="cm"># Ejecutar contenedor</span>
+                        docker ps <span class="cm"># Listar activos</span>
+                        docker logs &lt;id&gt; <span class="cm"># Ver logs</span>
+                        docker push mi-api:1.0 <span class="cm"># Subir a registro</span>
+                        docker-compose up -d <span class="cm"># Multi-servicio</span>
                     </div>
                 </div>
+                <div class="col-lg-6">
+                    <h4 class="sub-title">Kubernetes — Orquestación a escala</h4>
+                    <p class="body-text">Kubernetes (K8s) automatiza el despliegue, escalado y gestión de aplicaciones
+                        en contenedores. Su arquitectura se basa en un <strong class="hl">Control Plane</strong> que
+                        gestiona el estado deseado del sistema y múltiples <strong class="hl">Nodos Worker</strong> que
+                        ejecutan los workloads.</p>
+                    <figure class="img-figure mt-3">
+                        <img src="https://kubernetes.io/images/docs/components-of-kubernetes.svg"
+                            alt="Arquitectura de un clúster Kubernetes con control plane y nodos"
+                            class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/560x340/1a1a2e/43e97b?text=Kubernetes+Architecture'" />
+                        <figcaption>Figura 7. Componentes de un clúster Kubernetes: Control Plane y Nodos Worker.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Cards Kubernetes + video -->
+            <div class="row g-4 mb-5">
                 <div class="col-md-6 col-lg-4">
-                    <div class="feat-card cyan">
-                        <div class="feat-icon ic-blue"><i class="bi bi-boxes"></i></div>
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-boxes"></i></div>
                         <h5>Pods y Deployments</h5>
-                        <p>El <strong style="color:#fff">Pod</strong> es la unidad mínima de Kubernetes (1+
-                            contenedores). Un <strong style="color:#fff">Deployment</strong> gestiona replicas y
-                            rollbacks automáticos de pods.</p>
+                        <p>El <strong class="hl-sm">Pod</strong> es la unidad mínima de Kubernetes (1 o más
+                            contenedores). Un <strong class="hl-sm">Deployment</strong> gestiona réplicas, rolling
+                            updates y rollbacks automáticos.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="feat-card green">
                         <div class="feat-icon ic-green"><i class="bi bi-arrow-repeat"></i></div>
-                        <h5>Auto-Scaling</h5>
-                        <p>Kubernetes puede escalar automáticamente el número de pods según la demanda (CPU, memoria),
-                            garantizando disponibilidad sin desperdicio de recursos.</p>
+                        <h5>Horizontal Pod Autoscaler</h5>
+                        <p>K8s escala automáticamente el número de pods según métricas de CPU, memoria o métricas
+                            personalizadas, garantizando disponibilidad sin desperdicio de recursos.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="feat-card cyan">
-                        <div class="feat-icon ic-blue"><i class="bi bi-shield-lock"></i></div>
-                        <h5>Secrets & ConfigMaps</h5>
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-globe"></i></div>
+                        <h5>Services e Ingress</h5>
+                        <p>Los <strong class="hl-sm">Services</strong> exponen pods como endpoints de red estables. El
+                            <strong class="hl-sm">Ingress</strong> gestiona el tráfico externo HTTP/S con soporte de
+                            dominio, TLS y reglas de enrutamiento.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-shield-lock"></i></div>
+                        <h5>Secrets y ConfigMaps</h5>
                         <p>Gestiona credenciales y configuraciones de forma segura sin hardcodear valores sensibles en
-                            las imágenes de los contenedores.</p>
+                            las imágenes. Los <strong class="hl-sm">Secrets</strong> están codificados en Base64 y
+                            pueden cifrarse en reposo.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="feat-card green">
                         <div class="feat-icon ic-green"><i class="bi bi-hdd-stack"></i></div>
                         <h5>Persistent Volumes</h5>
-                        <p>Permite que los contenedores almacenen datos que persisten más allá del ciclo de vida del
-                            pod, con soporte para múltiples proveedores de almacenamiento.</p>
+                        <p>Permite almacenar datos que persisten más allá del ciclo de vida de un pod. Compatible con
+                            múltiples backends: AWS EBS, Google Persistent Disk, NFS, local storage.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="feat-card cyan">
-                        <div class="feat-icon ic-blue"><i class="bi bi-globe"></i></div>
-                        <h5>Servicios & Ingress</h5>
-                        <p>Los <strong style="color:#fff">Services</strong> exponen pods como endpoints de red. El
-                            <strong style="color:#fff">Ingress</strong> gestiona el tráfico externo con soporte de
-                            dominio y HTTPS.
-                        </p>
+                    <div class="feat-card green">
+                        <div class="feat-icon ic-green"><i class="bi bi-diagram-3"></i></div>
+                        <h5>Namespaces y RBAC</h5>
+                        <p>Los <strong class="hl-sm">Namespaces</strong> permiten aislar recursos en un clúster
+                            compartido. <strong class="hl-sm">RBAC</strong> (Control de Acceso Basado en Roles) define
+                            qué usuarios o pods pueden hacer qué operaciones.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Video contenedores -->
-            <div class="row g-4 align-items-center mt-2">
+            <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
                     <div class="video-wrap">
-                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/Wfh6sFkSbdo"
-                                title="Docker y Kubernetes explicados" allowfullscreen></iframe></div>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/Wfh6sFkSbdo" title="Docker y Kubernetes"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <h5 style="font-weight:700;color:#fff;">¿Por qué los contenedores revolucionaron el desarrollo?</h5>
-                    <p style="color:#9090b0;font-size:.92rem;">Los contenedores resolvieron el clásico problema de
-                        <em>"en mi máquina funciona"</em>. Al empaquetar la aplicación junto con todas sus dependencias,
-                        garantizan que el comportamiento sea idéntico en cualquier entorno: laptop del desarrollador,
-                        servidor de staging o producción en la nube.
+                    <h5 class="sub-title-sm">Docker + Kubernetes: la combinación ganadora</h5>
+                    <p class="body-text">Docker empaqueta la aplicación; Kubernetes la opera a escala. Juntos forman la
+                        base del desarrollo moderno cloud-native. La mayoría de los proveedores cloud ofrecen Kubernetes
+                        gestionado: <strong class="hl">EKS</strong> (AWS), <strong class="hl">GKE</strong> (Google) y
+                        <strong class="hl">AKS</strong> (Azure), eliminando la complejidad de operar el Control Plane.
                     </p>
                     <div class="d-flex flex-wrap gap-2 mt-3">
                         <span class="topic-pill" style="border-color:var(--accent);color:var(--accent);"><i
@@ -816,34 +1090,33 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════════
      TEMA 5 — APLICACIONES PARA LA NUBE
-══════════════════════════════════════════════════ -->
+══════════════════════════════════════════════ -->
     <span class="section-anchor" id="nube"></span>
     <section>
         <div class="container">
+
             <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="feat-icon ic-orange"
-                    style="width:48px;height:48px;font-size:1.4rem;border-radius:14px;flex-shrink:0"><i
-                        class="bi bi-cloud"></i></div>
+                <div class="feat-icon ic-orange topic-icon"><i class="bi bi-cloud"></i></div>
                 <div>
                     <div class="section-tag" style="color:var(--orange)">Tema 5</div>
-                    <h2 class="section-title mb-0"><span
-                            style="background:linear-gradient(90deg,var(--orange),#facc15);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Aplicaciones
-                            para la Nube</span></h2>
+                    <h2 class="section-title mb-0"><span class="gradient-text-orange">Aplicaciones para la Nube</span>
+                    </h2>
                 </div>
             </div>
             <div class="divider div-orange"></div>
 
-            <!-- Stats bar -->
-            <div class="stats-bar mb-5" style="background:linear-gradient(135deg,#1a0f00,#2a1a00);">
+            <!-- Stats -->
+            <div class="stats-bar stats-orange mb-5">
                 <div class="row text-center g-3">
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:var(--orange);">94%</div>
-                        <div class="stat-label">de empresas usan algún servicio en la nube (Flexera, 2024)</div>
+                        <div class="stat-label">de empresas utilizan algún servicio en la nube (Flexera, 2024)</div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:var(--orange);">$679B</div>
@@ -851,212 +1124,290 @@
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:var(--orange);">3 modelos</div>
-                        <div class="stat-label">IaaS, PaaS y SaaS definen la nube</div>
+                        <div class="stat-label">IaaS, PaaS y SaaS definen los servicios cloud</div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="stat-number" style="color:var(--orange);">5 pilares</div>
-                        <div class="stat-label">del Well-Architected Framework (AWS)</div>
+                        <div class="stat-label">del Well-Architected Framework de AWS</div>
                     </div>
                 </div>
             </div>
 
+            <!-- Definición + imagen modelos cloud -->
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h4 class="sub-title">¿Qué es el Cloud Computing?</h4>
+                    <p class="body-text">El <strong class="hl">cómputo en la nube</strong> es la entrega de recursos
+                        informáticos —servidores, almacenamiento, bases de datos, redes, software e inteligencia
+                        artificial— a través de internet bajo un modelo de <strong class="hl">pago por uso</strong>.
+                        Elimina la necesidad de adquirir, mantener y actualizar infraestructura física propia.</p>
+                    <p class="body-text">Una <strong class="hl">aplicación nativa de la nube (cloud-native)</strong> es
+                        aquella diseñada desde cero para aprovechar las ventajas del cloud: elasticidad, alta
+                        disponibilidad global, despliegue automatizado, resiliencia ante fallos y escalado horizontal
+                        ilimitado.</p>
+                    <p class="body-text">El cloud no es solo una cuestión tecnológica: es un cambio de paradigma
+                        cultural. Permite a equipos pequeños construir y operar aplicaciones que compiten en escala con
+                        grandes corporaciones, sin inversión inicial en infraestructura (CapEx → OpEx).</p>
+                </div>
+                <div class="col-lg-6">
+                    <figure class="img-figure">
+                        <img src="https://www.redhat.com/rhdc/managed-files/iaas-paas-saas-diagram4-1638x1046.png"
+                            alt="Diagrama de modelos de servicio cloud: IaaS, PaaS y SaaS" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/580x380/1a1a2e/fb923c?text=IaaS+PaaS+SaaS'" />
+                        <figcaption>Figura 8. Comparación de los modelos de servicio cloud: IaaS, PaaS y SaaS según el
+                            nivel de control del usuario.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Modelos de servicio: timeline -->
+            <h4 class="sub-title mb-1">Modelos de servicio en la nube</h4>
+            <p class="body-text mb-4">Cada modelo ofrece un nivel diferente de abstracción y control. La elección
+                depende del equipo, el presupuesto y la complejidad de la aplicación.</p>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card orange">
+                        <div class="feat-icon ic-orange"><i class="bi bi-server"></i></div>
+                        <h5>IaaS</h5>
+                        <p><strong class="hl-sm">Infraestructura como Servicio.</strong> El proveedor ofrece VMs, redes
+                            y almacenamiento. Tú controlas el SO, middleware y aplicaciones. Máximo control, máxima
+                            responsabilidad.<br /><em style="font-size:.8rem;color:#666;">AWS EC2, Google Compute
+                                Engine, Azure VMs</em></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card orange">
+                        <div class="feat-icon ic-orange"><i class="bi bi-gear"></i></div>
+                        <h5>PaaS</h5>
+                        <p><strong class="hl-sm">Plataforma como Servicio.</strong> El proveedor gestiona la
+                            infraestructura y el SO. Tú solo despliegas tu código. Ideal para equipos que quieren
+                            enfocarse en el producto.<br /><em style="font-size:.8rem;color:#666;">Heroku, Google App
+                                Engine, AWS Elastic Beanstalk</em></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card orange">
+                        <div class="feat-icon ic-orange"><i class="bi bi-window"></i></div>
+                        <h5>SaaS</h5>
+                        <p><strong class="hl-sm">Software como Servicio.</strong> El proveedor gestiona todo. Tú accedes
+                            a la aplicación vía navegador o API. Sin instalación, sin mantenimiento.<br /><em
+                                style="font-size:.8rem;color:#666;">Gmail, Salesforce, Microsoft 365, Slack, Zoom</em>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feat-card orange">
+                        <div class="feat-icon ic-orange"><i class="bi bi-lightning"></i></div>
+                        <h5>FaaS / Serverless</h5>
+                        <p><strong class="hl-sm">Funciones como Servicio.</strong> Ejecutas código en respuesta a
+                            eventos sin gestionar servidores. Pagas solo por ejecución (milisegundos). Escala a cero
+                            automáticamente.<br /><em style="font-size:.8rem;color:#666;">AWS Lambda, Google Cloud
+                                Functions, Azure Functions</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DevOps CI/CD + imagen -->
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <figure class="img-figure">
+                        <img src="https://www.redhat.com/rhdc/managed-files/styles/wysiwyg_float/s3/ci-cd-flow-desktop_0.png"
+                            alt="Pipeline CI/CD DevOps para aplicaciones cloud-native" class="img-fluid img-rounded"
+                            onerror="this.src='https://via.placeholder.com/580x360/1a1a2e/fb923c?text=CI/CD+Pipeline'" />
+                        <figcaption>Figura 9. Pipeline CI/CD: integración y entrega continua en aplicaciones
+                            cloud-native.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="sub-title">Principios de las apps cloud-native</h4>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="feat-card orange p-3">
+                                <div class="feat-icon ic-orange" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-arrows-fullscreen"></i></div>
+                                <h5 style="font-size:.9rem;">Escalado Elástico</h5>
+                                <p style="font-size:.82rem;">Escala automáticamente según demanda, sin intervención
+                                    manual.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feat-card orange p-3">
+                                <div class="feat-icon ic-orange" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-shield-check"></i></div>
+                                <h5 style="font-size:.9rem;">Alta Disponibilidad</h5>
+                                <p style="font-size:.82rem;">Multi-región y multi-zona: 99.9%+ de uptime garantizado.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feat-card orange p-3">
+                                <div class="feat-icon ic-orange" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-robot"></i></div>
+                                <h5 style="font-size:.9rem;">DevOps & CI/CD</h5>
+                                <p style="font-size:.82rem;">Pipelines automatizados de integración, pruebas y
+                                    despliegue.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feat-card orange p-3">
+                                <div class="feat-icon ic-orange" style="width:40px;height:40px;font-size:1.1rem;"><i
+                                        class="bi bi-eye"></i></div>
+                                <h5 style="font-size:.9rem;">Observabilidad</h5>
+                                <p style="font-size:.82rem;">Métricas, logs y trazas en tiempo real para detectar
+                                    problemas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proveedores + 12 Factor App -->
             <div class="row g-5 mb-5">
-                <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">¿Qué es el Cloud Computing?</h4>
-                    <p style="color:#9090b0;">El <strong style="color:#fff">cómputo en la nube</strong> es la entrega de
-                        recursos informáticos —servidores, almacenamiento, bases de datos, redes, software e
-                        inteligencia— a través de internet ("la nube") bajo un modelo de pago por uso. Elimina la
-                        necesidad de adquirir y mantener infraestructura física.</p>
-                    <p style="color:#9090b0;">Una <strong style="color:#fff">aplicación nativa de la nube
-                            (cloud-native)</strong> es aquella diseñada desde cero para aprovechar las ventajas del
-                        cloud: escalado elástico, alta disponibilidad, despliegue automatizado y resiliencia ante
-                        fallos.</p>
-
-                    <h5 class="mt-4" style="font-weight:700;color:#fff;">Modelos de servicio</h5>
-                    <div class="timeline mt-3">
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--orange);background:var(--orange)"></div>
-                            <h6>IaaS — Infraestructura como Servicio</h6>
-                            <p>El proveedor ofrece infraestructura virtualizada (VMs, redes, almacenamiento). Tú
-                                controlas el SO y las aplicaciones. Ej: AWS EC2, Azure VMs, Google Compute Engine.</p>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:#facc15;background:#facc15"></div>
-                            <h6>PaaS — Plataforma como Servicio</h6>
-                            <p>El proveedor gestiona la infraestructura y el SO. Tú solo despliegas tu código. Ej:
-                                Heroku, Google App Engine, AWS Elastic Beanstalk.</p>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--cyan);background:var(--cyan)"></div>
-                            <h6>SaaS — Software como Servicio</h6>
-                            <p>El proveedor gestiona todo. Tú solo usas la aplicación vía navegador. Ej: Gmail,
-                                Salesforce, Microsoft 365, Slack.</p>
-                        </div>
-                        <div class="tl-item">
-                            <div class="tl-dot" style="color:var(--accent);background:var(--accent)"></div>
-                            <h6>FaaS — Funciones como Servicio (Serverless)</h6>
-                            <p>Ejecutas código en respuesta a eventos sin gestionar servidores. Solo pagas por
-                                ejecución. Ej: AWS Lambda, Google Cloud Functions, Azure Functions.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <h4 style="font-weight:700;color:#fff;">Características de las Apps Cloud-Native</h4>
-                    <div class="row g-3 mb-4">
-                        <div class="col-6">
-                            <div class="feat-card orange">
-                                <div class="feat-icon ic-orange"><i class="bi bi-arrows-fullscreen"></i></div>
-                                <h5>Escalado Elástico</h5>
-                                <p>Se escalan automáticamente según la demanda, sin intervención manual.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="feat-card orange">
-                                <div class="feat-icon ic-orange"><i class="bi bi-shield-check"></i></div>
-                                <h5>Alta Disponibilidad</h5>
-                                <p>Desplegadas en múltiples regiones y zonas para garantizar 99.9%+ de uptime.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="feat-card orange">
-                                <div class="feat-icon ic-orange"><i class="bi bi-robot"></i></div>
-                                <h5>DevOps & CI/CD</h5>
-                                <p>Pipelines automáticos de integración, pruebas y despliegue continuo.</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="feat-card orange">
-                                <div class="feat-icon ic-orange"><i class="bi bi-eye"></i></div>
-                                <h5>Observabilidad</h5>
-                                <p>Métricas, logs y trazas distribuidas para monitorear el estado en tiempo real.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h5 style="font-weight:700;color:#fff;">Principales proveedores Cloud</h5>
+                <div class="col-lg-5">
+                    <h4 class="sub-title">Principales proveedores Cloud</h4>
                     <div class="row g-3 mt-1">
-                        <div class="col-4">
-                            <div class="feat-card text-center p-3">
-                                <i class="bi bi-amazon fs-2" style="color:#FF9900;"></i>
-                                <p class="mt-2 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
-                                    Amazon<br />Web Services</p>
-                                <p style="font-size:.72rem;color:#666;margin:2px 0 0;">EC2, S3, Lambda, EKS</p>
+                        <div class="col-12">
+                            <div class="feat-card p-3 d-flex align-items-start gap-3">
+                                <i class="bi bi-amazon fs-2 flex-shrink-0" style="color:#FF9900;"></i>
+                                <div>
+                                    <strong style="color:#fff;">Amazon Web Services (AWS)</strong>
+                                    <p class="mb-0 mt-1" style="color:#9090b0;font-size:.85rem;">El mayor proveedor
+                                        cloud con más de 200 servicios. Líder en cuota de mercado. Servicios clave: EC2,
+                                        S3, Lambda, RDS, EKS, CloudFront, SageMaker.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="feat-card text-center p-3">
-                                <i class="bi bi-microsoft fs-2" style="color:#00a4ef;"></i>
-                                <p class="mt-2 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
-                                    Microsoft<br />Azure</p>
-                                <p style="font-size:.72rem;color:#666;margin:2px 0 0;">AKS, Functions, CosmosDB</p>
+                        <div class="col-12">
+                            <div class="feat-card p-3 d-flex align-items-start gap-3">
+                                <i class="bi bi-microsoft fs-2 flex-shrink-0" style="color:#00a4ef;"></i>
+                                <div>
+                                    <strong style="color:#fff;">Microsoft Azure</strong>
+                                    <p class="mb-0 mt-1" style="color:#9090b0;font-size:.85rem;">Segundo en cuota de
+                                        mercado. Fuerte integración con el ecosistema Microsoft. Servicios clave: AKS,
+                                        Azure Functions, CosmosDB, Azure DevOps, OpenAI Service.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="feat-card text-center p-3">
-                                <i class="bi bi-google fs-2" style="color:#4285F4;"></i>
-                                <p class="mt-2 mb-0" style="font-size:.78rem;color:#ccc;font-weight:600;">
-                                    Google<br />Cloud</p>
-                                <p style="font-size:.72rem;color:#666;margin:2px 0 0;">GKE, Cloud Run, BigQuery</p>
+                        <div class="col-12">
+                            <div class="feat-card p-3 d-flex align-items-start gap-3">
+                                <i class="bi bi-google fs-2 flex-shrink-0" style="color:#4285F4;"></i>
+                                <div>
+                                    <strong style="color:#fff;">Google Cloud Platform (GCP)</strong>
+                                    <p class="mb-0 mt-1" style="color:#9090b0;font-size:.85rem;">Líder en Kubernetes,
+                                        Big Data e IA/ML. Infraestructura de red propia de Google. Servicios clave: GKE,
+                                        Cloud Run, BigQuery, Vertex AI, Firebase.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- The 12 Factor App -->
-            <h4 style="font-weight:700;color:#fff;" class="mb-1">La metodología <span
-                    style="color:var(--orange);">12-Factor App</span></h4>
-            <p style="color:#9090b0;font-size:.9rem;margin-bottom:1.5rem;">Un conjunto de buenas prácticas para
-                construir aplicaciones cloud-native robustas, portables y mantenibles.</p>
-            <div class="row g-3">
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="feat-card orange p-3 text-center"><span
-                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">I</span>
-                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Codebase<br />(1 repo)</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="feat-card orange p-3 text-center"><span
-                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">II</span>
-                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Dependencias declaradas</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="feat-card orange p-3 text-center"><span
-                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">III</span>
-                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Config en entorno</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="feat-card orange p-3 text-center"><span
-                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">IV</span>
-                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Servicios como recursos</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="feat-card orange p-3 text-center"><span
-                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">V</span>
-                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Build, Release, Run</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="feat-card orange p-3 text-center"><span
-                            style="font-size:1.4rem;font-weight:800;color:var(--orange);">VI–XII</span>
-                        <p class="mt-1 mb-0" style="font-size:.78rem;color:#ccc;">Procesos, Puertos, Logs…</p>
+                <div class="col-lg-7">
+                    <h4 class="sub-title">La metodología <span style="color:var(--orange);">12-Factor App</span></h4>
+                    <p class="body-text">Un manifiesto de buenas prácticas para construir aplicaciones cloud-native
+                        robustas, portables y escalables. Fue creado por ingenieros de Heroku con base en su experiencia
+                        operando miles de apps.</p>
+                    <div class="row g-2 mt-2">
+                        <div class="col-6 col-md-4">
+                            <div class="feat-card orange p-2 text-center"><span
+                                    style="font-size:1.1rem;font-weight:800;color:var(--orange);">I</span>
+                                <p class="mb-0" style="font-size:.78rem;color:#ccc;">Codebase único en control de
+                                    versiones</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="feat-card orange p-2 text-center"><span
+                                    style="font-size:1.1rem;font-weight:800;color:var(--orange);">II</span>
+                                <p class="mb-0" style="font-size:.78rem;color:#ccc;">Dependencias declaradas
+                                    explícitamente</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="feat-card orange p-2 text-center"><span
+                                    style="font-size:1.1rem;font-weight:800;color:var(--orange);">III</span>
+                                <p class="mb-0" style="font-size:.78rem;color:#ccc;">Config almacenada en variables de
+                                    entorno</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="feat-card orange p-2 text-center"><span
+                                    style="font-size:1.1rem;font-weight:800;color:var(--orange);">IV</span>
+                                <p class="mb-0" style="font-size:.78rem;color:#ccc;">Servicios de apoyo como recursos
+                                    adjuntos</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="feat-card orange p-2 text-center"><span
+                                    style="font-size:1.1rem;font-weight:800;color:var(--orange);">V–VI</span>
+                                <p class="mb-0" style="font-size:.78rem;color:#ccc;">Build, Release y Run separados.
+                                    Procesos sin estado</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="feat-card orange p-2 text-center"><span
+                                    style="font-size:1.1rem;font-weight:800;color:var(--orange);">VII–XII</span>
+                                <p class="mb-0" style="font-size:.78rem;color:#ccc;">Port binding, Concurrencia,
+                                    Descartabilidad, Logs como streams…</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Video nube -->
-            <div class="row g-4 align-items-center mt-4">
+            <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
                     <div class="video-wrap">
-                        <div class="ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/M988_fsOSWo"
-                                title="Cloud Computing explicado" allowfullscreen></iframe></div>
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/M988_fsOSWo" title="Cloud Computing explicado"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <h5 style="font-weight:700;color:#fff;">¿Por qué migrar a la nube?</h5>
-                    <p style="color:#9090b0;font-size:.92rem;">La nube no es solo infraestructura: es un cambio de
-                        paradigma. Permite a equipos pequeños construir y operar aplicaciones que compiten con grandes
-                        empresas, sin necesidad de invertir en servidores físicos. La combinación de microservicios,
-                        contenedores y servicios cloud es la base del desarrollo moderno.</p>
+                    <h5 class="sub-title-sm">La convergencia: Microservicios + Contenedores + Nube</h5>
+                    <p class="body-text">Estas tres tecnologías se potencian mutuamente: los <strong
+                            class="hl">microservicios</strong> definen la arquitectura, los <strong
+                            class="hl">contenedores</strong> empaquetan y aíslan cada servicio, y la <strong
+                            class="hl">nube</strong> provee la infraestructura elástica para operarlos a escala global.
+                        Esta trinidad es la base del software empresarial moderno.</p>
+                    <p class="body-text">Dominar este stack abre oportunidades en roles de alto impacto: Backend
+                        Developer, DevOps/SRE, Cloud Architect y Platform Engineer.</p>
                     <div class="d-flex flex-wrap gap-2 mt-3">
                         <span class="topic-pill" style="border-color:var(--orange);color:var(--orange);"><i
                                 class="bi bi-check-circle"></i>Escalable</span>
                         <span class="topic-pill" style="border-color:#facc15;color:#facc15;"><i
-                                class="bi bi-check-circle"></i>Económico</span>
+                                class="bi bi-check-circle"></i>Rentable</span>
                         <span class="topic-pill" style="border-color:var(--accent);color:var(--accent);"><i
                                 class="bi bi-check-circle"></i>Global</span>
                         <span class="topic-pill" style="border-color:var(--cyan);color:var(--cyan);"><i
-                                class="bi bi-check-circle"></i>Seguro</span>
+                                class="bi bi-check-circle"></i>Resiliente</span>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════
-     MAPA
-══════════════════════════════════════════════════ -->
-    <section class="alt" id="mapa" style="padding:60px 0;">
+    <!-- ════════════════════ MAPA ════════════════════ -->
+    <section class="alt" style="padding:60px 0;">
         <div class="container">
             <div class="text-center mb-4">
                 <h2 class="section-title">Ubicación de <span class="gradient-text">Referencia</span></h2>
-                <p style="color:#666;font-size:.9rem;">Google Cloud — Mountain View, CA. Pioneros en contenedores y
-                    Kubernetes.</p>
+                <p style="color:#666;font-size:.9rem;">Googleplex — Mountain View, CA. Cuna de Kubernetes y Google
+                    Cloud.</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="map-wrap">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.3920433658655!2d-122.08499988469093!3d37.42199997982596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1ses!2smx!4v1680000000001!5m2!1ses!2smx"
-                            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
-                    <p class="text-center mt-2" style="font-size:.82rem;color:#555;"><i
-                            class="bi bi-geo-alt-fill text-danger me-1"></i>Googleplex — Mountain View, CA, EE.UU. —
-                        Sede de Google Cloud y cuna de Kubernetes.</p>
+                    <p class="text-center mt-2" style="font-size:.82rem;color:#555;">
+                        <i class="bi bi-geo-alt-fill text-danger me-1"></i>Googleplex — Mountain View, California,
+                        EE.UU. — Sede de Google Cloud y cuna de Kubernetes y contenedores a escala industrial.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1096,7 +1447,7 @@
                                 <div class="feat-icon ic-blue" style="width:36px;height:36px;font-size:1rem;"><i
                                         class="bi bi-search"></i></div>
                                 <h6 style="color:#fff;margin-top:.4rem;">Service Discovery</h6>
-                                <p style="font-size:.82rem;">Mecanismo por el cual los servicios se registran y se
+                                <p style="font-size:.82rem;">Mecanismo por el cual los servicios se registran y
                                     localizan dinámicamente (Consul, Eureka, K8s DNS).</p>
                             </div>
                         </div>
@@ -1114,17 +1465,35 @@
                                 <div class="feat-icon ic-orange" style="width:36px;height:36px;font-size:1rem;"><i
                                         class="bi bi-key"></i></div>
                                 <h6 style="color:#fff;margin-top:.4rem;">JWT / OAuth 2.0</h6>
-                                <p style="font-size:.82rem;">Estándares de autenticación y autorización para APIs. JWT =
-                                    tokens firmados. OAuth = delegación de permisos.</p>
+                                <p style="font-size:.82rem;">Estándares de autenticación y autorización. JWT = tokens
+                                    firmados. OAuth = delegación de permisos entre apps.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feat-card p-3">
                                 <div class="feat-icon ic-purple" style="width:36px;height:36px;font-size:1rem;"><i
                                         class="bi bi-broadcast"></i></div>
-                                <h6 style="color:#fff;margin-top:.4rem;">Serverless</h6>
-                                <p style="font-size:.82rem;">Modelo donde el código se ejecuta en funciones sin
-                                    gestionar servidores. Pago por ejecución (AWS Lambda).</p>
+                                <h6 style="color:#fff;margin-top:.4rem;">Serverless / FaaS</h6>
+                                <p style="font-size:.82rem;">Ejecución de código en funciones sin gestionar servidores.
+                                    Pago por milisegundo de ejecución (AWS Lambda).</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-blue" style="width:36px;height:36px;font-size:1rem;"><i
+                                        class="bi bi-file-code"></i></div>
+                                <h6 style="color:#fff;margin-top:.4rem;">OpenAPI / Swagger</h6>
+                                <p style="font-size:.82rem;">Especificación estándar para describir APIs RESTful.
+                                    Swagger UI genera documentación interactiva automáticamente.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feat-card p-3">
+                                <div class="feat-icon ic-green" style="width:36px;height:36px;font-size:1rem;"><i
+                                        class="bi bi-git"></i></div>
+                                <h6 style="color:#fff;margin-top:.4rem;">CI/CD</h6>
+                                <p style="font-size:.82rem;">Integración Continua y Entrega Continua. Pipelines
+                                    automáticos que prueban y despliegan código en cada commit.</p>
                             </div>
                         </div>
                     </div>
@@ -1199,8 +1568,8 @@
                     <strong style="color:#a0a0c0;"><i class="bi bi-cpu-fill me-1"
                             style="color:var(--primary)"></i>Unidad II — Programación del Lado del
                         Servidor</strong><br />
-                    <small>Desarrollo Web · 6°A · LITIC · 2026<br />
-                        Profra: Dr. en C. Margarita Mondragón Arellano</small>
+                    <small>Desarrollo Web · 6°A · LITIC · 2026<br />Profra: Dr. en C. Margarita Mondragón
+                        Arellano</small>
                 </div>
                 <div class="col-md-4 text-md-center">
                     <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#infoModal">
@@ -1208,19 +1577,21 @@
                     </button>
                 </div>
                 <div class="col-md-3 text-md-end">
-                    <small style="color:#444;">Fuentes: <a href="https://aws.amazon.com/es/what-is/api/"
-                            target="_blank">AWS</a> · <a href="https://www.ibm.com/mx-es/topics/microservices"
-                            target="_blank">IBM</a> · <a href="https://kubernetes.io/es/docs/concepts/architecture/"
-                            target="_blank">Kubernetes</a> · <a
-                            href="https://cloud.google.com/learn/what-are-containers?hl=es" target="_blank">Google
-                            Cloud</a></small>
+                    <small style="color:#444;">
+                        Fuentes:
+                        <a href="https://aws.amazon.com/es/what-is/api/" target="_blank">AWS</a> ·
+                        <a href="https://www.ibm.com/mx-es/topics/microservices" target="_blank">IBM</a> ·
+                        <a href="https://kubernetes.io/es/docs/concepts/architecture/" target="_blank">Kubernetes</a> ·
+                        <a href="https://cloud.google.com/learn/what-are-containers?hl=es" target="_blank">Google
+                            Cloud</a>
+                    </small>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
